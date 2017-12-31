@@ -1,0 +1,17 @@
+body {
+  background-color: #333333;
+  overflow-x:hidden;
+}
+
+.wrapper > #container, .wrapper > #render {
+  display: block;
+  position:relative;
+  left: 30vw;
+}
+
+#container {
+	min-width: 310px;
+	max-width: 800px;
+	height: 400px;
+  display: block;
+}
