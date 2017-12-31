@@ -36,7 +36,7 @@ function setup() {
   population1 = new Population();
   LIST_FIRST_COLOR = population1.color;
   population2 = new Population();
-  population2.color = ;
+  //population2.color = ;
   LIST_SECOND_COLOR = population2.color;
 
   updateChart();
