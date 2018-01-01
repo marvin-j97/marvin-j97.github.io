@@ -4,9 +4,10 @@ function Population(col) {
   this.color = col;
   this.averageFitness = 0;
 
-  for (var i = 0; i < _SIZE; i++) {
+  for (var i = 0; i < _POPULATION_SIZE; i++) {
     this.rockets[i] = new Rocket();
-    this.rockets[i].color = this.color;
+    var rand = random(0, 50);
+    this.rockets[i].color = color(red(this.color) - rand, green(this.color) - rand, blue(this.color) - rand);
   }
 
   this.update = function() {

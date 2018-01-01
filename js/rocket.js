@@ -20,8 +20,6 @@ function Rocket(dna) {
   }
 
   this.update = function() {
-    this.speedFactor--;
-
     this.applyForce(this.dna.genes[_LIFE_COUNTER]);
 
     var d = dist(this.position.x, this.position.y, _TARGET.x, _TARGET.y);
@@ -41,6 +39,7 @@ function Rocket(dna) {
     }
 
     if (!this.completed && !this.stuck) {
+      this.speedFactor--;
       this.velocity.add(this.acceleration);
       this.position.add(this.velocity);
       this.acceleration.mult(0);

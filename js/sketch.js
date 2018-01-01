@@ -9,15 +9,15 @@ var _HEIGHT = 600;
 // TWEAK VALUES HERE ///////////
 ////////////////////////////////
 
-var _SIZE = 50;
+var _POPULATION_SIZE = 50;
 var _LINEDRAW_STEP = 25;
 var _LIFESPAN = 400;
 
-var _COMPLETED_REWARD = 10;
+var _COMPLETED_REWARD = 25;
 var _STUCK_PENALTY = 0.1;
-var _SPEED_FACTOR_MULT = 2;
-var _MAGNITUDE = 0.25;
-var _MUTATION_RATE = 0.01;
+var _SPEED_FACTOR_MULT = 5;
+var _MAGNITUDE = 0.2;
+var _MUTATION_RATE = 0.005;
 
 ////////////////////////////////
 ////////////////////////////////
@@ -41,10 +41,9 @@ var meter = new FPSMeter(document.getElementById('render'), {theme: 'dark', grap
 function setup() {
   var canvas = createCanvas(_WIDTH, _HEIGHT);
   canvas.parent('render');
-
   _TARGET = createVector(width/2, 50);
 
-  _OBSTACLES.push(new Obstacle(_WIDTH / 3, _HEIGHT / 4, _WIDTH / 3, 32));
+  _OBSTACLES.push(new Obstacle(_WIDTH / 2.4, _HEIGHT / 4, _WIDTH / 6, 32));
   _OBSTACLES.push(new Obstacle(0, _HEIGHT / 1.75, _WIDTH / 2.5, 32));
   _OBSTACLES.push(new Obstacle(_WIDTH / 2 + _WIDTH / 10, _HEIGHT / 1.75, _WIDTH / 2.5, 32));
 
