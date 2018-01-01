@@ -28,6 +28,11 @@ var _POPULATION_COUNT = 0;
 var _OBSTACLES = [];
 var _TARGET;
 
+var _MOVE_LEFT = false;
+var _MOVE_RIGHT = false;
+var _MOVE_UP = false;
+var _MOVE_DOWN = false;
+
 var _AVERAGE_FITNESS_LIST_FIRST = [];
 var _AVERAGE_FITNESS_LIST_SECOND = [];
 
@@ -81,12 +86,55 @@ function draw() {
 
   fill(255, 200);
   noStroke();
+  updateTarget();
   ellipse(_TARGET.x, _TARGET.y, 32, 32);
   textSize(20);
   text("Age: "+_LIFE_COUNTER+"/"+_LIFESPAN, 5, height - 35);
   text("Population #: "+_POPULATION_COUNT, 5, height - 5);
 
   meter.tick();
+}
+
+function updateTarget() {
+  if (_MOVE_RIGHT) {
+    _TARGET.x += 5;
+  } else
+  if (_MOVE_LEFT) {
+    _TARGET.x -= 5;
+  }
+  if (_MOVE_UP) {
+    _TARGET.y -= 5;
+  } else
+  if (_MOVE_DOWN) {
+    _TARGET.y += 5;
+  }
+}
+function keyPressed() {
+  if (key == 'D') {
+    _MOVE_RIGHT = true;
+  } else if (key == 'A') {
+    _MOVE_LEFT = true;
+  }
+  if (key == 'W') {
+    _MOVE_UP = true;
+  }
+  if (key == 'S') {
+    _MOVE_DOWN = true;
+  }
+}
+
+function keyReleased() {
+  if (key == 'D') {
+    _MOVE_RIGHT = false;
+  } else if (key == 'A') {
+    _MOVE_LEFT = false;
+  }
+  if (key == 'W') {
+    _MOVE_UP = false;
+  }
+  if (key == 'S') {
+    _MOVE_DOWN = false;
+  }
 }
 
 function updateChart() {
