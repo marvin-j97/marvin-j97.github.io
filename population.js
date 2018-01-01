@@ -1,7 +1,7 @@
-function Population() {
+function Population(col) {
   this.rockets = [];
   this.pool = [];
-  this.color = color(100 + random(155), 100 + random(155), 100 + random(155), 200);
+  this.color = col;
   this.averageFitness = 0;
 
   for (var i = 0; i < _SIZE; i++) {

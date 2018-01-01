@@ -1,10 +1,10 @@
 var _WIDTH = 800;
 var _HEIGHT = 600;
 
-var _SIZE = 100;
-var _LINEDRAW_STEP = 50;
+var _SIZE = 50;
+var _LINEDRAW_STEP = 25;
 var _LIFESPAN = 400;
-var _COMPLETED_REWARD = 10;
+var _COMPLETED_REWARD = 25;
 var _STUCK_PENALTY = 0.1;
 var _MAGNITUDE = 0.25;
 var _MUTATION_RATE = 0.01;
@@ -33,10 +33,11 @@ function setup() {
   canvas.parent('render');
   _TARGET = createVector(width/2, 50);
 
-  population1 = new Population();
+  var col = randomColor();
+  population1 = new Population(col);
+  population2 = new Population(contrast(col));
+
   LIST_FIRST_COLOR = population1.color;
-  population2 = new Population();
-  //population2.color = ;
   LIST_SECOND_COLOR = population2.color;
 
   updateChart();
