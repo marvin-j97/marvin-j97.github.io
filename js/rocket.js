@@ -33,6 +33,7 @@ function Rocket(dna) {
       this.line.push(this.position.copy());
     }
 
+    // TODO: outOfBounds function
     if ((this.position.x > _WIDTH || this.position.x < 0 ||
         this.position.y > _HEIGHT || this.position.y < 0) && !this.stuck) {
       this.stuck = true;

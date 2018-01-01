@@ -28,7 +28,6 @@ function Population(col) {
 
       this.averageFitness += this.rockets[i].fitness;
     }
-    _MAXIMUM_FITNESS = round(maxFit);
     this.averageFitness = round(this.averageFitness / this.rockets.length);
 
     for (var i = 0; i < this.rockets.length; i++) {

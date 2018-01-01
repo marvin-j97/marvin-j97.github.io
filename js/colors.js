@@ -1,6 +1,6 @@
 function randomColor() {
   colorMode(HSB);
-  var c = color(random(360), random(50, 100), 100);
+  var c = color(random(360), random(25, 100), 100);
   return hsvToRgb(c);
 }
 
