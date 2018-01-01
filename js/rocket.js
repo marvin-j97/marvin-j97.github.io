@@ -9,6 +9,7 @@ function Rocket(dna) {
   }
   this.fitness = 0;
   this.completed = false;
+  this.speedFactor = _LIFESPAN;
   this.stuck = false;
 
   this.color = color(0);
@@ -19,6 +20,8 @@ function Rocket(dna) {
   }
 
   this.update = function() {
+    this.speedFactor--;
+
     this.applyForce(this.dna.genes[_LIFE_COUNTER]);
 
     var d = dist(this.position.x, this.position.y, _TARGET.x, _TARGET.y);
@@ -27,15 +30,12 @@ function Rocket(dna) {
       this.position = _TARGET.copy();
     }
 
-    if (this.position.x > _OBSTACLE_X && this.position.x < _OBSTACLE_X + _OBSTACLE_W &&
-        this.position.y > _OBSTACLE_Y && this.position.y < _OBSTACLE_Y + _OBSTACLE_H && !this.stuck) {
+    if (this.collision()) {
       this.stuck = true;
       this.line.push(this.position.copy());
     }
 
-    // TODO: outOfBounds function
-    if ((this.position.x > _WIDTH || this.position.x < 0 ||
-        this.position.y > _HEIGHT || this.position.y < 0) && !this.stuck) {
+    if (this.outOfBounds()) {
       this.stuck = true;
       this.line.push(this.position.copy());
     }
@@ -51,11 +51,30 @@ function Rocket(dna) {
     }
   }
 
+  this.collision = function() {
+    for (var i = 0; i < _OBSTACLES.length; i++) {
+      if ((this.position.x > _OBSTACLES[i].position.x && this.position.x < _OBSTACLES[i].position.x + _OBSTACLES[i].dimensions.x &&
+          this.position.y > _OBSTACLES[i].position.y && this.position.y < _OBSTACLES[i].position.y + _OBSTACLES[i].dimensions.y) && !this.stuck) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  this.outOfBounds = function() {
+    if ((this.position.x > _WIDTH || this.position.x < 0 ||
+        this.position.y > _HEIGHT || this.position.y < 0) && !this.stuck) {
+      return true;
+    }
+    return false;
+  }
+
   this.calcFitness = function() {
     var d = dist(this.position.x, this.position.y, _TARGET.x, _TARGET.y);
     this.fitness = map(d, 0, width, width, 0);
     if (this.completed) {
       this.fitness *= _COMPLETED_REWARD;
+      this.fitness += this.speedFactor * _SPEED_FACTOR_MULT;
     }
     if (this.stuck) {
       this.fitness *= _STUCK_PENALTY;
