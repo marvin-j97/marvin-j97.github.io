@@ -24,7 +24,10 @@ function Rocket(dna) {
 
     var d = dist(this.position.x, this.position.y, _TARGET.x, _TARGET.y);
     if (d < 16) {
-      this.completed = true;
+      if (!this.completed) {
+        this.completed = true; 
+        this.line.push(this.position.copy());
+      }
       this.position = _TARGET.copy();
     }
 
