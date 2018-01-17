@@ -9,22 +9,34 @@ var _HEIGHT = 600;
 // TWEAK VALUES HERE ///////////
 ////////////////////////////////
 
-var _POPULATION_SIZE = 50;
-var _LINEDRAW_STEP = 25;
-var _LIFESPAN = 400;
+var _POPULATION_SIZE ;
+var _LINEDRAW_STEP;
+var _LIFESPAN;
 
-var _COMPLETED_REWARD = 25;
-var _STUCK_PENALTY = 0.1;
-var _SPEED_FACTOR_MULT = 5;
-var _MAGNITUDE = 0.2;
-var _MUTATION_RATE = 0.005;
+var _COMPLETED_REWARD;
+var _STUCK_PENALTY;
+var _SPEED_FACTOR_MULT;
+var _MAGNITUDE;
+var _MUTATION_RATE;
+
+function UpdateTweakValues(){
+  _POPULATION_SIZE = $('#txtPopulationSize').val();
+  _LINEDRAW_STEP = $('#txtLineDrawStep').val();
+  _LIFESPAN = $('#txtLifespan').val();
+
+  _COMPLETED_REWARD = $('#txtCompletedReward').val();
+  _STUCK_PENALTY = $('#txtStuckPenalty').val();
+  _SPEED_FACTOR_MULT = $('#txtSpeedFactorMult').val();
+  _MAGNITUDE = $('#txtMagnitude').val();
+  _MUTATION_RATE = $('#txtMutationRate').val();
+}
 
 ////////////////////////////////
 ////////////////////////////////
 ////////////////////////////////
 
-var _LIFE_COUNTER = 0;
-var _POPULATION_COUNT = 0;
+var _LIFE_COUNTER;
+var _POPULATION_COUNT;
 var _OBSTACLES = [];
 var _TARGET;
 
@@ -36,7 +48,7 @@ var _MOVE_DOWN = false;
 var _AVERAGE_FITNESS_LIST_FIRST = [];
 var _AVERAGE_FITNESS_LIST_SECOND = [];
 
-var meter = new FPSMeter(document.getElementById('render'), {theme: 'dark', graph: 1, heat: 1});
+//var meter = new FPSMeter(document.getElementById('render'), {theme: 'dark', graph: 1, heat: 1});
 
 function setup() {
   var canvas = createCanvas(_WIDTH, _HEIGHT);
@@ -54,44 +66,59 @@ function setup() {
   updateChart();
 }
 
+function StartNew(){
+  UpdateTweakValues();
+  _POPULATION_COUNT = 0;
+  _LIFE_COUNTER = 0;
+  var col = randomColor();
+  population0 = new Population(col);
+  population1 = new Population(contrast(col));
+
+  if (!initFinished){
+    initFinished = true;
+  }
+}
+
 function draw() {
-  background(0);
+  if (initFinished){
+    background(0);
 
-  population0.update();
-  population1.update();
-  _LIFE_COUNTER++;
+    population0.update();
+    population1.update();
+    _LIFE_COUNTER++;
 
-  if (_LIFE_COUNTER == _LIFESPAN) {
-    population0.evaluate();
-    population0.selection();
+    if (_LIFE_COUNTER == _LIFESPAN) {
+      population0.evaluate();
+      population0.selection();
 
-    population1.evaluate();
-    population1.selection();
-    _POPULATION_COUNT++;
-    _LIFE_COUNTER = 0;
+      population1.evaluate();
+      population1.selection();
+      _POPULATION_COUNT++;
+      _LIFE_COUNTER = 0;
 
-    updateChart();
+      updateChart();
+    }
+
+    for (var i = 0; i < _OBSTACLES.length; i++) {
+      _OBSTACLES[i].draw();
+    }
+
+    strokeWeight(1);
+    stroke(255, 200);
+    fill(0, 200);
+    rectMode(CORNER);
+    rect(-1, _HEIGHT + 1, 180, -64);
+
+    fill(255, 200);
+    noStroke();
+    updateTarget();
+    ellipse(_TARGET.x, _TARGET.y, 32, 32);
+    textSize(20);
+    text("Age: "+_LIFE_COUNTER+"/"+_LIFESPAN, 5, height - 35);
+    text("Population #: "+_POPULATION_COUNT, 5, height - 5);
+
+    //meter.tick();
   }
-
-  for (var i = 0; i < _OBSTACLES.length; i++) {
-    _OBSTACLES[i].draw();
-  }
-
-  strokeWeight(1);
-  stroke(255, 200);
-  fill(0, 200);
-  rectMode(CORNER);
-  rect(-1, _HEIGHT + 1, 180, -64);
-
-  fill(255, 200);
-  noStroke();
-  updateTarget();
-  ellipse(_TARGET.x, _TARGET.y, 32, 32);
-  textSize(20);
-  text("Age: "+_LIFE_COUNTER+"/"+_LIFESPAN, 5, height - 35);
-  text("Population #: "+_POPULATION_COUNT, 5, height - 5);
-
-  meter.tick();
 }
 
 function updateTarget() {

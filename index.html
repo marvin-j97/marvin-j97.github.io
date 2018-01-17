@@ -1,21 +1,96 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="styles.css">
-  <script language="javascript" type="text/javascript" src="js/p5.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <!-- uncomment lines below to include extra p5 libraries -->
   <!--<script language="javascript" src="libraries/p5.dom.js"></script>-->
   <!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
 </head>
 
 <body>
-  <div class="wrapper">
-    <div id="render"></div>
-    <div id="container"></div>
-  </div>
+  <header>
+    <nav>
+      <div class="nav-wrapper indigo darken-2">
+        <a href="#" data-activates="slide-out" class="button-collapse show-on-small"><i class="material-icons">menu</i></a>
+        <a href="#" class="brand-logo center">Smarter Rockets</a>
+      </div>
+    </nav>
+    <ul id="slide-out" class="side-nav fixed white-text">
+      <li><a class="subheader">Tweak Values</a></li>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="tooltipped" data-tooltip="Amount of 'Rockets' per Population" id="txtPopulationSize" type="text">
+          <label for="txtPopulationSize">Population Size</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="tooltipped" data-tooltip="Steps between drawing line segments (higher = better performance)" id="txtLineDrawStep" type="text">
+          <label for="txtLineDrawStep">Line draw step</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="tooltipped" data-tooltip="Steps before new populations are created (also is the amount of genes a rocket has)" id="txtLifespan" type="text">
+          <label for="txtLifespan">Lifespan</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="tooltipped" data-tooltip="Bonus fitness factor for when a rocket reaches the goal" id="txtCompletedReward" type="text">
+          <label for="txtCompletedReward">Completed Reward</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="tooltipped" data-tooltip="Penalty fitness factor for when a rocket gets stuck in a wall/screen border" id="txtStuckPenalty" type="text">
+          <label for="txtStuckPenalty">Stuck penalty</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="tooltipped" data-tooltip="Bonus fitness factor for the time left when a rocket needed when reaching the goal" id="txtSpeedFactorMult" type="text">
+          <label for="txtSpeedFactorMult">Speed factor multiplier</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="tooltipped" data-tooltip="Movement speed and inertia of the rockets" id="txtMagnitude" type="text">
+          <label for="txtMagnitude">Magnitude</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input class="tooltipped" data-tooltip="Chance that a gene is mutated upon creating new populations" id="txtMutationRate" type="text">
+          <label for="txtMutationRate">Mutation rate</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <a id="btnRefresh" class="waves-effect waves-light btn tooltipped indigo darken-2" data-tooltip="Refresh simulation"><i class="material-icons right">refresh</i>Refresh</a>
+        </div>
+      </div>
+    </ul>
+  </header>
+  <main>
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center-align">
+          <div id="render"></div>
+          <div id="container"></div>
+        </div>
+      </div>
+    </div>
+  </main>
 
+  <script language="javascript" type="text/javascript" src="js/p5.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
   <script src="https://code.highcharts.com/highcharts.src.js"></script>
-  <script language="javascript" type="text/javascript" src="js/fpsmeter.js"></script>
+  <!--<script language="javascript" type="text/javascript" src="js/fpsmeter.js"></script>-->
   <script language="javascript" type="text/javascript" src="js/colors.js"></script>
   <script language="javascript" type="text/javascript" src="js/sketch.js"></script>
   <script language="javascript" type="text/javascript" src="js/obstacle.js"></script>
@@ -23,11 +98,47 @@
   <script language="javascript" type="text/javascript" src="js/population.js"></script>
   <script language="javascript" type="text/javascript" src="js/dna.js"></script>
   <script>
+  var initFinished = false;
+  $(document).ready(function(){
+    $('.tooltipped').tooltip({
+      position: 'right'
+    });
+    $('#btnRefresh').tooltip({
+      position: 'bottom'
+    });
+    $(".button-collapse").sideNav();
+    PresetValues();
+    StartNew();
+  });
+
+  function PresetValues(){
+    $('#txtPopulationSize').val(50);
+    $('#txtLineDrawStep').val(25);
+    $('#txtLifespan').val(400);
+    $('#txtCompletedReward').val(25);
+    $('#txtStuckPenalty').val(0.1);
+    $('#txtSpeedFactorMult').val(5);
+    $('#txtMagnitude').val(0.2);
+    $('#txtMutationRate').val(0.005);
+  }
+
+  $('#btnRefresh').click(function(){
+    StartNew();
+  });
+  $('input').bind('keypress', function(e){
+    // Check if pressed key is "enter"
+    if (e.keyCode===13){
+      StartNew();
+    }
+  });
+
+
+
   function high() {
     Highcharts.chart('container', {
       chart: {
         type: 'areaspline',
-        backgroundColor: "#333333"
+        backgroundColor: "#000000"
       },
       title: {
         text: ''
