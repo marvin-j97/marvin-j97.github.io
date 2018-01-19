@@ -136,7 +136,10 @@
     }
   });
   $('#btnRefresh').click(function(){
-    StartNew();
+    if (initFinished) {
+      StartNew();
+      high();
+    }
   });
   $('input').bind('keypress', function(e){
     // Check if pressed key is "enter"

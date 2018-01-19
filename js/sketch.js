@@ -70,6 +70,9 @@ function StartNew() {
   UpdateTweakValues();
   _POPULATION_COUNT = 0;
   _LIFE_COUNTER = 0;
+  _AVERAGE_FITNESS_LIST_FIRST = [];
+  _AVERAGE_FITNESS_LIST_SECOND = [];
+
   var col = randomColor();
   population0 = new Population(col);
   population1 = new Population(contrast(col));
