@@ -10,6 +10,14 @@ function Population(col) {
     this.rockets[i].color = color(red(this.color) - rand, green(this.color) - rand, blue(this.color) - rand);
   }
 
+  this.recolor = function(col) {
+    this.color = col;
+    for (var i = 0; i < _POPULATION_SIZE; i++) {
+      var rand = random(0, 50);
+      this.rockets[i].color = color(red(this.color) - rand, green(this.color) - rand, blue(this.color) - rand);
+    }
+  }
+
   this.update = function() {
     for (var i = 0; i < this.rockets.length; i++) {
       this.rockets[i].update();

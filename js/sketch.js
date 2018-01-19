@@ -9,7 +9,7 @@ var _HEIGHT = 600;
 // TWEAK VALUES HERE ///////////
 ////////////////////////////////
 
-var _POPULATION_SIZE ;
+var _POPULATION_SIZE;
 var _LINEDRAW_STEP;
 var _LIFESPAN;
 
@@ -66,7 +66,7 @@ function setup() {
   updateChart();
 }
 
-function StartNew(){
+function StartNew() {
   UpdateTweakValues();
   _POPULATION_COUNT = 0;
   _LIFE_COUNTER = 0;
@@ -77,6 +77,12 @@ function StartNew(){
   if (!initFinished){
     initFinished = true;
   }
+}
+
+function Recolor() {
+  var col = randomColor();
+  population0.recolor(col)
+  population1.recolor(contrast(col));
 }
 
 function draw() {

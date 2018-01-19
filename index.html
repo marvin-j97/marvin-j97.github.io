@@ -52,7 +52,7 @@
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <input class="tooltipped" data-tooltip="Bonus fitness factor for the time left when a rocket needed when reaching the goal" id="txtSpeedFactorMult" type="text">
+          <input class="tooltipped" data-tooltip="Bonus fitness factor for the time left when a rocket reached the goal" id="txtSpeedFactorMult" type="text">
           <label for="txtSpeedFactorMult">Speed factor multiplier</label>
         </div>
       </div>
@@ -75,7 +75,7 @@
       </div>
       <div class="row">
         <div class="col s12 center-align">
-          <a id="btnRecolor" class="waves-effect waves-light btn tooltipped indigo darken-2" data-tooltip="Refresh color of all rockets"><i class="material-icons right">refresh</i>Recolor</a>
+          <a id="btnRecolor" class="waves-effect waves-light btn tooltipped pink darken-2" data-tooltip="Refresh color of all rockets"><i class="material-icons right">refresh</i>Recolor</a>
         </div>
       </div>
     </ul>
@@ -103,7 +103,9 @@
   <script language="javascript" type="text/javascript" src="js/population.js"></script>
   <script language="javascript" type="text/javascript" src="js/dna.js"></script>
   <script>
+
   var initFinished = false;
+
   $(document).ready(function(){
     $('.tooltipped').tooltip({
       position: 'right'
@@ -128,16 +130,18 @@
   }
 
   $('#btnRecolor').click(function(){
-    // TODO recolor-function
+    if (initFinished) {
+      Recolor();
+      high();
+    }
   });
   $('#btnRefresh').click(function(){
     StartNew();
   });
   $('input').bind('keypress', function(e){
     // Check if pressed key is "enter"
-    if (e.keyCode===13){
+    if (e.keyCode===13)
       StartNew();
-    }
   });
 
 
