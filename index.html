@@ -73,6 +73,11 @@
           <a id="btnRefresh" class="waves-effect waves-light btn tooltipped indigo darken-2" data-tooltip="Refresh simulation"><i class="material-icons right">refresh</i>Refresh</a>
         </div>
       </div>
+      <div class="row">
+        <div class="col s12 center-align">
+          <a id="btnRecolor" class="waves-effect waves-light btn tooltipped indigo darken-2" data-tooltip="Refresh color of all rockets"><i class="material-icons right">refresh</i>Recolor</a>
+        </div>
+      </div>
     </ul>
   </header>
   <main>
@@ -122,6 +127,9 @@
     $('#txtMutationRate').val(0.005);
   }
 
+  $('#btnRecolor').click(function(){
+    // TODO recolor-function
+  });
   $('#btnRefresh').click(function(){
     StartNew();
   });
