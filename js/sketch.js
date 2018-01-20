@@ -46,6 +46,7 @@ var _AVERAGE_FITNESS_LIST_SECOND = [];
 var _OFFSET_X, _OFFSET_Y; // Mouseclick offset
 var _DELETING = false;
 var _HINT = true;
+var _SHIFT = false;
 
 function setup() {
   var canvas = createCanvas(_WIDTH, _HEIGHT);
@@ -92,6 +93,7 @@ function draw() {
       text("Create and drag obstacles with <Left Click>", width / 2, height / 2);
       text("Delete obstacles with <Right Click>", width / 2, height / 2 + 32);
       text("Resize them while dragging with the <Mouse Wheel>", width / 2, height / 2 + 64);
+      text("Hold <Shift> for vertical resizing", width / 2, height / 2 + 96);
     }
 
     population0.update();
@@ -140,8 +142,14 @@ function draw() {
 function mouseWheel(event) {
   for (var i = 0; i < _OBSTACLES.length; i++) {
     if (_OBSTACLES[i].dragging) {
-      _OBSTACLES[i].dimensions.x -= event.delta * _OBSTACLES[i].dimensions.x / width;
-      _OBSTACLES[i].dimensions.x = constrain(_OBSTACLES[i].dimensions.x, 1, width);
+      if (_SHIFT) {
+        _OBSTACLES[i].dimensions.y -= event.delta * _OBSTACLES[i].dimensions.y / height;
+        _OBSTACLES[i].dimensions.y = constrain(_OBSTACLES[i].dimensions.y, 4, height);
+      }
+      else {
+        _OBSTACLES[i].dimensions.x -= event.delta * _OBSTACLES[i].dimensions.x / width;
+        _OBSTACLES[i].dimensions.x = constrain(_OBSTACLES[i].dimensions.x, 4, width);
+      }
     }
   }
   return false;
@@ -192,6 +200,16 @@ function mouseReleased() {
   if (mouseButton === RIGHT) {
     _DELETING = false;
   }
+}
+
+function keyPressed() {
+  if (keyCode === SHIFT)
+    _SHIFT = true;
+}
+
+function keyReleased() {
+  if (keyCode === SHIFT)
+    _SHIFT = false;
 }
 
 function updateChart() {
