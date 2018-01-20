@@ -40,24 +40,17 @@ var _POPULATION_COUNT;
 var _OBSTACLES = [];
 var _TARGET;
 
-var _MOVE_LEFT = false;
-var _MOVE_RIGHT = false;
-var _MOVE_UP = false;
-var _MOVE_DOWN = false;
-
 var _AVERAGE_FITNESS_LIST_FIRST = [];
 var _AVERAGE_FITNESS_LIST_SECOND = [];
 
-//var meter = new FPSMeter(document.getElementById('render'), {theme: 'dark', graph: 1, heat: 1});
+var _OFFSET_X, _OFFSET_Y; // Mouseclick offset
+var _DELETING = false;
+var _HINT = true;
 
 function setup() {
   var canvas = createCanvas(_WIDTH, _HEIGHT);
   canvas.parent('render');
-  _TARGET = createVector(width/2, 50);
-
-  _OBSTACLES.push(new Obstacle(_WIDTH / 2.4, _HEIGHT / 4, _WIDTH / 6, 32));
-  _OBSTACLES.push(new Obstacle(0, _HEIGHT / 1.75, _WIDTH / 2.5, 32));
-  _OBSTACLES.push(new Obstacle(_WIDTH / 2 + _WIDTH / 10, _HEIGHT / 1.75, _WIDTH / 2.5, 32));
+  _TARGET = new Target(width / 2, 32, 16);
 
   var col = randomColor();
   population0 = new Population(col);
@@ -90,7 +83,16 @@ function Recolor() {
 
 function draw() {
   if (initFinished){
-    background(0);
+    background(5);
+
+    if (_HINT) {
+      textAlign(CENTER);
+      textSize(20);
+      fill(255, 127);
+      text("Create and drag obstacles with <Left Click>", width / 2, height / 2);
+      text("Delete obstacles with <Right Click>", width / 2, height / 2 + 32);
+      text("Resize them while dragging with the <Mouse Wheel>", width / 2, height / 2 + 64);
+    }
 
     population0.update();
     population1.update();
@@ -108,67 +110,87 @@ function draw() {
       updateChart();
     }
 
+    if (_DELETING) {
+      for (var i = 0; i < _OBSTACLES.length; i++) {
+        if (_OBSTACLES[i].hover()) {
+          _OBSTACLES.splice(i, 1);
+        }
+      }
+    }
+
     for (var i = 0; i < _OBSTACLES.length; i++) {
       _OBSTACLES[i].draw();
     }
 
-    strokeWeight(1);
-    stroke(255, 200);
+    _TARGET.draw();
+
+    noStroke();
     fill(0, 200);
     rectMode(CORNER);
-    rect(-1, _HEIGHT + 1, 180, -64);
+    rect(0, _HEIGHT-64, 172, 64, 0, 32, 0, 0);
 
-    fill(255, 200);
-    noStroke();
-    updateTarget();
-    ellipse(_TARGET.x, _TARGET.y, 32, 32);
+    textAlign(LEFT);
     textSize(20);
-    text("Age: "+_LIFE_COUNTER+"/"+_LIFESPAN, 5, height - 35);
-    text("Population #: "+_POPULATION_COUNT, 5, height - 5);
-
-    //meter.tick();
+    fill(255, 200);
+    text("Age: "+_LIFE_COUNTER+"/"+_LIFESPAN, 5, height - 40);
+    text("Population #: "+_POPULATION_COUNT, 5, height - 10);
   }
 }
 
-function updateTarget() {
-  if (_MOVE_RIGHT) {
-    _TARGET.x += 5;
-  } else
-  if (_MOVE_LEFT) {
-    _TARGET.x -= 5;
+function mouseWheel(event) {
+  for (var i = 0; i < _OBSTACLES.length; i++) {
+    if (_OBSTACLES[i].dragging) {
+      _OBSTACLES[i].dimensions.x -= event.delta * _OBSTACLES[i].dimensions.x / width;
+      _OBSTACLES[i].dimensions.x = constrain(_OBSTACLES[i].dimensions.x, 1, width);
+    }
   }
-  if (_MOVE_UP) {
-    _TARGET.y -= 5;
-  } else
-  if (_MOVE_DOWN) {
-    _TARGET.y += 5;
-  }
+  return false;
 }
-function keyPressed() {
-  if (key == 'D') {
-    _MOVE_RIGHT = true;
-  } else if (key == 'A') {
-    _MOVE_LEFT = true;
+
+function mousePressed() {
+  _HINT = false;
+
+  if (mouseButton === LEFT) {
+    var pressedObject = false;
+
+    if (_TARGET.hover()) {
+      _TARGET.dragging = true;
+      _OFFSET_X = _TARGET.position.x-mouseX;
+      _OFFSET_Y = _TARGET.position.y-mouseY;
+      pressedObject = true;
+    }
+
+    for (var i = 0; i < _OBSTACLES.length; i++) {
+      if (_OBSTACLES[i].hover() && !pressedObject) {
+        _OBSTACLES[i].dragging = true;
+        _OFFSET_X = _OBSTACLES[i].position.x-mouseX;
+        _OFFSET_Y = _OBSTACLES[i].position.y-mouseY;
+        pressedObject = true;
+      }
+    }
+    if (!pressedObject && mouseX >= 0 && mouseY >= 0 && mouseX < width && mouseY < height) {
+      var newObstacle = new Obstacle(mouseX - 100, mouseY - 12, 200, 24);
+      newObstacle.dragging = true;
+      _OFFSET_X = newObstacle.position.x-mouseX;
+      _OFFSET_Y = newObstacle.position.y-mouseY;
+      pressedObject = true;
+      _OBSTACLES.push(newObstacle);
+    }
   }
-  if (key == 'W') {
-    _MOVE_UP = true;
-  }
-  if (key == 'S') {
-    _MOVE_DOWN = true;
+  if (mouseButton === RIGHT) {
+    _DELETING = true;
   }
 }
 
-function keyReleased() {
-  if (key == 'D') {
-    _MOVE_RIGHT = false;
-  } else if (key == 'A') {
-    _MOVE_LEFT = false;
+function mouseReleased() {
+  for (var i = 0; i < _OBSTACLES.length; i++) {
+    _OBSTACLES[i].dragging = false;
   }
-  if (key == 'W') {
-    _MOVE_UP = false;
-  }
-  if (key == 'S') {
-    _MOVE_DOWN = false;
+
+  _TARGET.dragging = false;
+
+  if (mouseButton === RIGHT) {
+    _DELETING = false;
   }
 }
 
