@@ -28,7 +28,7 @@ Population.prototype.evaluate = function() {
   for (var i = 0; i < this.rockets.length; i++) {
     this.rockets[i].fitness /= maxFit;
   }
-  
+
   this.pool = [];
   for (var i = 0; i < this.rockets.length; i++) {
     var n = this.rockets[i].fitness * 100;
@@ -49,7 +49,8 @@ Population.prototype.selection = function() {
     child.mutate();
 
     newRockets[i] = new Rocket(child);
-    newRockets[i].color = this.color;
+    var rand = random(0, 75);
+    newRockets[i].color = color(red(this.color) - rand, green(this.color) - rand, blue(this.color) - rand);
   }
   this.rockets = newRockets;
 }
