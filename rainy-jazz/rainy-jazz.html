@@ -1,35 +1,111 @@
 <html>
+  <head>
+    <!-- Cookie Boi-->
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+    <style>
+      body {
+        background-image: url('rainyboi.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+      }
+
+      @font-face {
+        font-family: 'TravelingTypewriter';
+        src: url('TravelingTypewriter.ttf');
+      }
+
+      h1 {
+        font-family: 'TravelingTypewriter', sans-serif;
+        font-size: 36px;
+      }
+
+      p {
+        font-family: 'TravelingTypewriter', sans-serif;
+        font-size: 16px;
+      }
+
+      .wrapper {
+        margin-top: 64px;
+        text-align: center;
+      }
+
+      .button {
+        position: absolute;
+        top: 50%;
+      }
+    </style>
+  </head>
+
   <body>
-      <h1 align="center"><i><font color="#FAFAFA">Rainy Jazz</font></i></h2>
+    <h1 align="center">
+      <i>
+        <font color="#FAFAFA">Rainy Jazz</font>
+      </i>
+      </h2>
       <div align="center">
-          <iframe width="480" height="360" src="https://www.youtube.com/embed/6Zl5vpy__dQ?autoplay=1&loop=1&playlist=6Zl5vpy__dQ&showinfo=0&rel=0&fs=0&playsinline=1" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+        <iframe width="480" height="360" src="https://www.youtube.com/embed/6Zl5vpy__dQ?autoplay=1&loop=1&playlist=6Zl5vpy__dQ&showinfo=0&rel=0&fs=0&playsinline=1"
+          frameborder="0" allow="autoplay; encrypted-media"></iframe>
       </div>
       <div align="center">
-          <iframe width="480" height="360" src="https://www.youtube.com/embed/SDmbGrQqWog?autoplay=1&loop=1&playlist=SDmbGrQqWog&showinfo=0&rel=0&fs=0&playsinline=1" frameborder="0" allow="autoplay; encrypted-media"></iframe>
+        <iframe width="480" height="360" src="https://www.youtube.com/embed/SDmbGrQqWog?autoplay=1&loop=1&playlist=SDmbGrQqWog&showinfo=0&rel=0&fs=0&playsinline=1"
+          frameborder="0" allow="autoplay; encrypted-media"></iframe>
       </div>
-      <p align="center"><i><font color="#FAFAFA">Powered by Bohren & Der Club of Gore and Rainy Mood</font></i></p>
+      <p align="center">
+        <i>
+          <font color="#FAFAFA">Powered by Bohren & Der Club of Gore and Rainy Mood</font>
+        </i>
+      </p>
+      <div class="wrapper">
+        <button align="center" onclick="gaOptout()">
+          <i>
+            <font color="#000000">Opt out of Google Analytics</font>
+          </i>
+        </button>
+      </div>
+
+      <!-- Cookie Boi-->
+      <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+      
+      <!-- Google Analytics -->
+      <script> 
+        var gaProperty = 'UA-118344287-1';
+        var disableStr = 'ga-disable-' + gaProperty;
+        if (document.cookie.indexOf(disableStr + '=true') > -1) {
+          window[disableStr] = true;
+        }
+        function gaOptout() {
+          document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+          window[disableStr] = true;
+          alert('Das Tracking ist jetzt deaktiviert');
+        }
+        (function (i, s, o, g, r, a, m) {
+          i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+          }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-118344287-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+
+        window.addEventListener("load", function () {
+          window.cookieconsent.initialise({
+            "palette": {
+              "popup": {
+                "background": "#383b75"
+              },
+              "button": {
+                "background": "transparent",
+                "text": "#f1d600",
+                "border": "#f1d600"
+              }
+            }
+          })
+        });
+      </script>
   </body>
 </html>
-
-<style>
-  body {
-    background-image: url('rainyboi.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-  }
-  @font-face {
-    font-family: 'TravelingTypewriter';
-    src: url('TravelingTypewriter.ttf');
-  }
-  h1 {
-    font-family: 'TravelingTypewriter', sans-serif;
-    font-size: 36px;
-  }
-  p {
-    font-family: 'TravelingTypewriter', sans-serif;
-    font-size: 16px;
-  }
-</style>
