@@ -42,17 +42,14 @@ var NAVTREE =
         [ "Functions", "functions_func.html", null ],
         [ "Variables", "functions_vars.html", null ]
       ] ]
-    ] ],
-    [ "Files", "files.html", [
-      [ "File List", "files.html", "files_dup" ]
     ] ]
   ] ]
 ];
 
 var NAVTREEINDEX =
 [
-"_collision_logic_8h_source.html",
-"classrf_1_1_status_effect.html#a05f04ea87373fd77e52040467f62d18e"
+"annotated.html",
+"namespacerf.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
