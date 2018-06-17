@@ -3,6 +3,7 @@ var classrf_1_1_matrix =
     [ "Matrix", "classrf_1_1_matrix.html#aa9c874d766347365b9df838f883b9aa3", null ],
     [ "Matrix", "classrf_1_1_matrix.html#a70af1316d0098bb9bd9f232b817173ed", null ],
     [ "Matrix", "classrf_1_1_matrix.html#a7d9f48101c3b392e5f02e64995e9beeb", null ],
+    [ "Matrix", "classrf_1_1_matrix.html#accb5824e965edcf9593d3865cbb7c697", null ],
     [ "add", "classrf_1_1_matrix.html#a6d00108f9eebdec0489812cc558310a6", null ],
     [ "add", "classrf_1_1_matrix.html#ae9e8b5aea64d20ba39f56144073ebed9", null ],
     [ "clear", "classrf_1_1_matrix.html#af140f7099ffaa370408777bbefdf9c80", null ],

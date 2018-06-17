@@ -1,6 +1,16 @@
 var searchData=
 [
-  ['nav',['Nav',['../structrf_1_1path_1_1_nav.html',1,'rf::path::Nav'],['../structrf_1_1path_1_1_nav.html#a7c9cd20e5d72a1ac732380e67f1d303c',1,'rf::path::Nav::Nav()']]],
-  ['nextdouble',['nextDouble',['../namespacerf_1_1random.html#a8a174c28fc7774469b00183d585a7422',1,'rf::random']]],
-  ['nextint',['nextInt',['../namespacerf_1_1random.html#ad1de9c21d8f67b0504b13e2f04a4117a',1,'rf::random']]]
+  ['map',['Map',['../classrf_1_1_map.html',1,'rf::Map'],['../classrf_1_1_matrix.html#a87565f26b8f81bd7266ded8055d62968',1,'rf::Matrix::map()'],['../classrf_1_1_map.html#aa841b5c24898e534b5419174d8b65c03',1,'rf::Map::Map()']]],
+  ['mapoperation',['MapOperation',['../namespacerf.html#a53a3f38eb50a563f7e6af9840686afb0',1,'rf']]],
+  ['matmult',['matMult',['../classrf_1_1_matrix.html#af175b2658af9767a26857dc7bb8a4b10',1,'rf::Matrix']]],
+  ['matrix',['Matrix',['../classrf_1_1_matrix.html',1,'rf::Matrix&lt; T &gt;'],['../classrf_1_1_matrix.html#aa9c874d766347365b9df838f883b9aa3',1,'rf::Matrix::Matrix()'],['../classrf_1_1_matrix.html#a70af1316d0098bb9bd9f232b817173ed',1,'rf::Matrix::Matrix(int rows, int cols)'],['../classrf_1_1_matrix.html#a7d9f48101c3b392e5f02e64995e9beeb',1,'rf::Matrix::Matrix(Vector2&lt; int &gt; dim)'],['../classrf_1_1_matrix.html#accb5824e965edcf9593d3865cbb7c697',1,'rf::Matrix::Matrix(const Matrix&lt; T &gt; &amp;other)']]],
+  ['matrix_3c_20bool_20_3e',['Matrix&lt; bool &gt;',['../classrf_1_1_matrix.html',1,'rf']]],
+  ['matrix_3c_20rf_3a_3agameobject_20_2a_3e',['Matrix&lt; rf::GameObject *&gt;',['../classrf_1_1_matrix.html',1,'rf']]],
+  ['maxdisplayed',['maxDisplayed',['../classrf_1_1_message_log.html#a984c31d320c15a362d78181c0e77c521',1,'rf::MessageLog']]],
+  ['message',['Message',['../classrf_1_1_message.html',1,'rf::Message'],['../classrf_1_1_message.html#ac0aca688f4481f8de65d434076efcca5',1,'rf::Message::Message(std::string text)'],['../classrf_1_1_message.html#a7d50e73d30f13806a2d352c5794c2634',1,'rf::Message::Message(std::string text, rf::Color f)'],['../classrf_1_1_message.html#aded2cac9207ee86b06326b764db2ee08',1,'rf::Message::Message(std::string text, rf::Color f, rf::Color b)']]],
+  ['messagelog',['MessageLog',['../classrf_1_1_message_log.html',1,'rf::MessageLog'],['../classrf_1_1_game_manager.html#af68a4b2dbc27b6d1fa68854bebe2e91e',1,'rf::GameManager::messageLog()'],['../classrf_1_1_message_log.html#aa7e1b80914896b693b1f65e1642c5b8e',1,'rf::MessageLog::MessageLog()'],['../classrf_1_1_message_log.html#ad1d1f42814d7bfdd1b230c519a93655d',1,'rf::MessageLog::MessageLog(Position pos)']]],
+  ['monsterlogic',['MonsterLogic',['../classrf_1_1_monster_logic.html',1,'rf::MonsterLogic'],['../classrf_1_1_monster_logic.html#acc1ac35310afeec6fc2f961fea8205ad',1,'rf::MonsterLogic::MonsterLogic()'],['../classrf_1_1_monster_logic.html#a457a65a28a0f42566d5f427b5346eb40',1,'rf::MonsterLogic::MonsterLogic(int newViewRange)']]],
+  ['moveobject',['moveObject',['../classrf_1_1_game_manager.html#a32c685b431cad9db2065230391a441ef',1,'rf::GameManager']]],
+  ['movetowards',['moveTowards',['../classrf_1_1_monster_logic.html#a5e26ab1f877821b8f263bcdd0047fd35',1,'rf::MonsterLogic::moveTowards(Position pos)'],['../classrf_1_1_monster_logic.html#a9c59d4e88d9efbb59dc4925ac42213ab',1,'rf::MonsterLogic::moveTowards(GameObject *obj)']]],
+  ['mult',['mult',['../classrf_1_1_color.html#a95c28904557d08ccccc33b2741e69cea',1,'rf::Color::mult()'],['../classrf_1_1_matrix.html#a8b219592023074bf29c32c1345ff1d6b',1,'rf::Matrix::mult(Matrix&lt; T &gt; a, Matrix&lt; T &gt; b)'],['../classrf_1_1_matrix.html#adcb38c59accbc8a4cafc1615aede2542',1,'rf::Matrix::mult(T factor)'],['../classrf_1_1_matrix.html#a4b5520d112c4d87325a6cfbfcd424885',1,'rf::Matrix::mult(Matrix&lt; T &gt; other)']]]
 ];

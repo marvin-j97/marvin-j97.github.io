@@ -89,21 +89,166 @@ $(document).ready(function(){initNavTree('classrf_1_1_diagnostics.html','');});
 <div class="header">
   <div class="summary">
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="classrf_1_1_diagnostics-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">rf::Diagnostics Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Debug tools.  
+ <a href="classrf_1_1_diagnostics.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_diagnostics_8h_source.html">Diagnostics.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a764db465f1e46a1a6cb3788c7fd0c9c7"><td class="memItemLeft" align="right" valign="top"><a id="a764db465f1e46a1a6cb3788c7fd0c9c7"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>outln</b> (std::string s)</td></tr>
+<tr class="memitem:a764db465f1e46a1a6cb3788c7fd0c9c7"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_diagnostics.html#a764db465f1e46a1a6cb3788c7fd0c9c7">outln</a> (std::string s)</td></tr>
+<tr class="memdesc:a764db465f1e46a1a6cb3788c7fd0c9c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a debug message to standard output (console)  <a href="#a764db465f1e46a1a6cb3788c7fd0c9c7">More...</a><br /></td></tr>
 <tr class="separator:a764db465f1e46a1a6cb3788c7fd0c9c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a16cf2840b1a63ab9f94aca39f545ae84"><td class="memItemLeft" align="right" valign="top"><a id="a16cf2840b1a63ab9f94aca39f545ae84"></a>
-static void&#160;</td><td class="memItemRight" valign="bottom"><b>error</b> (const char *file, int line, std::string err)</td></tr>
+<tr class="memitem:a16cf2840b1a63ab9f94aca39f545ae84"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_diagnostics.html#a16cf2840b1a63ab9f94aca39f545ae84">error</a> (const char *file, int line, std::string err)</td></tr>
+<tr class="memdesc:a16cf2840b1a63ab9f94aca39f545ae84"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints a error message to standard output (console)  <a href="#a16cf2840b1a63ab9f94aca39f545ae84">More...</a><br /></td></tr>
 <tr class="separator:a16cf2840b1a63ab9f94aca39f545ae84"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5af2e60193a12ee74bc38eb7423c2a"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacerf.html#a5ada9c3c92fcaf26aad5dba89332695d">StringList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_diagnostics.html#a4c5af2e60193a12ee74bc38eb7423c2a">log</a> ()</td></tr>
+<tr class="memdesc:a4c5af2e60193a12ee74bc38eb7423c2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a log of memory usage etc.  <a href="#a4c5af2e60193a12ee74bc38eb7423c2a">More...</a><br /></td></tr>
+<tr class="separator:a4c5af2e60193a12ee74bc38eb7423c2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5352c13d4823feced4f8eebdb1814608"><td class="memItemLeft" align="right" valign="top"><a id="a5352c13d4823feced4f8eebdb1814608"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_diagnostics.html#a5352c13d4823feced4f8eebdb1814608">print</a> ()</td></tr>
+<tr class="memdesc:a5352c13d4823feced4f8eebdb1814608"><td class="mdescLeft">&#160;</td><td class="mdescRight">Writes a debug log to file (log.txt) <br /></td></tr>
+<tr class="separator:a5352c13d4823feced4f8eebdb1814608"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a6c6e34e9b3cd75b82dcd7428face4c80"><td class="memItemLeft" align="right" valign="top"><a id="a6c6e34e9b3cd75b82dcd7428face4c80"></a>
+static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_diagnostics.html#a6c6e34e9b3cd75b82dcd7428face4c80">ALLOCATED_OBJECTS</a></td></tr>
+<tr class="memdesc:a6c6e34e9b3cd75b82dcd7428face4c80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Counter of <a class="el" href="classrf_1_1_game_object.html" title="Represents a generic object whose behaviour can be defined by adding components. ">GameObject</a> allocations. <br /></td></tr>
+<tr class="separator:a6c6e34e9b3cd75b82dcd7428face4c80"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5374b6d091d63120c365f1e862534c1"><td class="memItemLeft" align="right" valign="top"><a id="ae5374b6d091d63120c365f1e862534c1"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_diagnostics.html#ae5374b6d091d63120c365f1e862534c1">SUPPRESS_STDOUT</a></td></tr>
+<tr class="memdesc:ae5374b6d091d63120c365f1e862534c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to suppress debug prints. <br /></td></tr>
+<tr class="separator:ae5374b6d091d63120c365f1e862534c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59496e0822dbce1257f28accc92ff7d3"><td class="memItemLeft" align="right" valign="top"><a id="a59496e0822dbce1257f28accc92ff7d3"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_diagnostics.html#a59496e0822dbce1257f28accc92ff7d3">SUPPRESS_ERRORS</a></td></tr>
+<tr class="memdesc:a59496e0822dbce1257f28accc92ff7d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to suppress error messages. <br /></td></tr>
+<tr class="separator:a59496e0822dbce1257f28accc92ff7d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Debug tools. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a16cf2840b1a63ab9f94aca39f545ae84"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16cf2840b1a63ab9f94aca39f545ae84">&#9670;&nbsp;</a></span>error()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rf::Diagnostics::error </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>line</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>err</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints a error message to standard output (console) </p>
+<p>Just use RF_ERR </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td>File the error occured in (<b>FILE</b>) </td></tr>
+    <tr><td class="paramname">line</td><td>Line where the error occured (<b>LINE</b>) </td></tr>
+    <tr><td class="paramname">err</td><td>Error message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a4c5af2e60193a12ee74bc38eb7423c2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5af2e60193a12ee74bc38eb7423c2a">&#9670;&nbsp;</a></span>log()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="namespacerf.html#a5ada9c3c92fcaf26aad5dba89332695d">StringList</a> rf::Diagnostics::log </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a log of memory usage etc. </p>
+<dl class="section return"><dt>Returns</dt><dd>Debug log </dd></dl>
+
+</div>
+</div>
+<a id="a764db465f1e46a1a6cb3788c7fd0c9c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a764db465f1e46a1a6cb3788c7fd0c9c7">&#9670;&nbsp;</a></span>outln()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void rf::Diagnostics::outln </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Prints a debug message to standard output (console) </p>
+<p>Just use RF_OUT </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">s</td><td>Debug message </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

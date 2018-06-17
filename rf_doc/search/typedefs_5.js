@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['voidfunction',['VoidFunction',['../namespacerf.html#a856efb0f3197e4421b8e4690cabc7081',1,'rf']]]
+  ['stringlist',['StringList',['../namespacerf.html#a5ada9c3c92fcaf26aad5dba89332695d',1,'rf']]]
 ];

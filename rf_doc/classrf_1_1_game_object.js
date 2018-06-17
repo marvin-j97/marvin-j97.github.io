@@ -7,7 +7,7 @@ var classrf_1_1_game_object =
     [ "~GameObject", "classrf_1_1_game_object.html#a56cfd2e3b73e56daf2d4a829adb869aa", null ],
     [ "addComponent", "classrf_1_1_game_object.html#aa8ad54843d40e0a7239ebd21ed96a187", null ],
     [ "addComponents", "classrf_1_1_game_object.html#a9cafe23f150738fe476804b656910595", null ],
-    [ "aggregateComponentData", "classrf_1_1_game_object.html#a099e606eb18d7771d974a92d0a5d0afc", null ],
+    [ "aggregateComponentData", "classrf_1_1_game_object.html#afeae3900a397314e7ea4979ad9831501", null ],
     [ "clearComponents", "classrf_1_1_game_object.html#abcc4d041c23470d0545e44a7e1188f75", null ],
     [ "draw", "classrf_1_1_game_object.html#a45152dbc7e9d66a1bc1d9d5d5257ac80", null ],
     [ "exists", "classrf_1_1_game_object.html#a5243b885295cd24bc046866af75dc566", null ],
@@ -22,7 +22,6 @@ var classrf_1_1_game_object =
     [ "sumComponentsDouble", "classrf_1_1_game_object.html#a91213f3d6a381eb0e397308d2f7ae159", null ],
     [ "sumComponentsInt", "classrf_1_1_game_object.html#a1baee526aaa64e75ec120af3d8d5e9e2", null ],
     [ "update", "classrf_1_1_game_object.html#a719dbb50a580ea12936bd82faa76b231", null ],
-    [ "inventory", "classrf_1_1_game_object.html#ade046ae551653e28c2a292871c3aaf31", null ],
     [ "position", "classrf_1_1_game_object.html#ac2b4b994476862a4f5826cbf19ebc2b4", null ],
     [ "type", "classrf_1_1_game_object.html#a0cb414a3a137c7f4251ffa34ea72193d", null ]
 ];

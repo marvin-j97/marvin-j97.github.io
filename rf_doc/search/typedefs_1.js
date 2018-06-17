@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['byte',['byte',['../namespacerf.html#a3c0889b34f4ef2b0a8bf8b7008f3c8af',1,'rf']]]
+  ['commandfunction',['CommandFunction',['../namespacerf.html#ad432eacfa9649d1171eb6e53afcf5962',1,'rf']]],
+  ['componentfilter',['ComponentFilter',['../namespacerf.html#a9b88535fdd345bc821d58886bb78d35f',1,'rf']]]
 ];

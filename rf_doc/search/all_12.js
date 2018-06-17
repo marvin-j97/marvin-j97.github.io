@@ -1,4 +1,14 @@
 var searchData=
 [
-  ['update',['update',['../classrf_1_1_component.html#a37b261f659799cc52fc5e7dacc8bd0ed',1,'rf::Component::update()'],['../classrf_1_1_game_manager.html#ab7828bc5c2b40a13ef2bedc569179d5d',1,'rf::GameManager::update()'],['../classrf_1_1_game_object.html#a719dbb50a580ea12936bd82faa76b231',1,'rf::GameObject::update()'],['../classrf_1_1_damage_over_time.html#a133c6a9672751c1f8a647e55bb3938e4',1,'rf::DamageOverTime::update()'],['../classrf_1_1_monster_logic.html#aea9579db9ccfd7b17dcd888971c46d16',1,'rf::MonsterLogic::update()'],['../classrf_1_1_player_input.html#af30c606d5bd48acc2444758ea394b1ed',1,'rf::PlayerInput::update()'],['../classrf_1_1_status_effect.html#a54eb460568909e2a80917b9409fe450e',1,'rf::StatusEffect::update()'],['../classrf_1_1_trap_logic.html#a95d6e492b35e1d59b73acd28df2fbb7e',1,'rf::TrapLogic::update()'],['../namespacerf_1_1los.html#a445d76fac7eadc0c6347dd215785c99e',1,'rf::los::update()']]]
+  ['teleportobject',['teleportObject',['../classrf_1_1_game_manager.html#a4930251ee9b3bcff82d4a70ec262ae81',1,'rf::GameManager']]],
+  ['test',['test',['../namespacerf_1_1los.html#ab853012829c3be4b84c7758c67b4bace',1,'rf::los']]],
+  ['textinput',['TextInput',['../structrf_1_1_text_input.html',1,'rf']]],
+  ['tick',['tick',['../classrf_1_1_status_effect.html#a5c0004d3dff6c892e718a8f273310655',1,'rf::StatusEffect']]],
+  ['ticks',['ticks',['../classrf_1_1_status_effect.html#a05f04ea87373fd77e52040467f62d18e',1,'rf::StatusEffect']]],
+  ['tileat',['tileAt',['../classrf_1_1_map.html#a4342236219ece9a93853bb3022f1a7df',1,'rf::Map']]],
+  ['toblthex',['toBLTHex',['../classrf_1_1_color.html#aca50c23eb3542f3ae5c1a3a3dba613d5',1,'rf::Color']]],
+  ['tostring',['toString',['../classrf_1_1_matrix.html#afb5e1ad282ce53b3a78aa411a057c776',1,'rf::Matrix::toString()'],['../struct_vector2.html#a0adc618102ca0c01845c08631b6e2ac3',1,'Vector2::toString()']]],
+  ['transpose',['transpose',['../classrf_1_1_matrix.html#ac65dca445c4c191dcf2763db0b763ffd',1,'rf::Matrix']]],
+  ['traplogic',['TrapLogic',['../classrf_1_1_trap_logic.html',1,'rf::TrapLogic'],['../classrf_1_1_trap_logic.html#abb9caac58e56d03dffe73d2879936b6e',1,'rf::TrapLogic::TrapLogic()'],['../classrf_1_1_trap_logic.html#aaabf309c2988b68fef529cd72c550afb',1,'rf::TrapLogic::TrapLogic(bool makeOwnerVisible)']]],
+  ['type',['type',['../classrf_1_1_game_object.html#a0cb414a3a137c7f4251ffa34ea72193d',1,'rf::GameObject']]]
 ];

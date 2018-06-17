@@ -1,6 +1,7 @@
 var namespacerf =
 [
     [ "path", "namespacerf_1_1path.html", "namespacerf_1_1path" ],
+    [ "snd", "namespacerf_1_1snd.html", "namespacerf_1_1snd" ],
     [ "ui", "namespacerf_1_1ui.html", "namespacerf_1_1ui" ],
     [ "CollisionLogic", "classrf_1_1_collision_logic.html", "classrf_1_1_collision_logic" ],
     [ "Color", "classrf_1_1_color.html", "classrf_1_1_color" ],
@@ -21,9 +22,8 @@ var namespacerf =
     [ "MonsterLogic", "classrf_1_1_monster_logic.html", "classrf_1_1_monster_logic" ],
     [ "Packet", "classrf_1_1_packet.html", "classrf_1_1_packet" ],
     [ "PlayerInput", "classrf_1_1_player_input.html", "classrf_1_1_player_input" ],
-    [ "Sound", "structrf_1_1_sound.html", "structrf_1_1_sound" ],
-    [ "SoundHandler", "classrf_1_1_sound_handler.html", "classrf_1_1_sound_handler" ],
     [ "StatusEffect", "classrf_1_1_status_effect.html", "classrf_1_1_status_effect" ],
+    [ "TextInput", "structrf_1_1_text_input.html", null ],
     [ "TrapLogic", "classrf_1_1_trap_logic.html", "classrf_1_1_trap_logic" ],
     [ "Window", "classrf_1_1_window.html", "classrf_1_1_window" ],
     [ "WizardCommand", "classrf_1_1_wizard_command.html", "classrf_1_1_wizard_command" ],

@@ -113,6 +113,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a044d5b87b6faccb98cabe2d8cea2bcc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad0bd3cd4ea3e981844fbc54f78678f89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_color.html#ad0bd3cd4ea3e981844fbc54f78678f89">Color</a> (unsigned int hex)</td></tr>
 <tr class="separator:ad0bd3cd4ea3e981844fbc54f78678f89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8286eee799c0b05877a00df9587ce0b2"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_color.html#a8286eee799c0b05877a00df9587ce0b2">Color</a> (std::string hexString)</td></tr>
+<tr class="separator:a8286eee799c0b05877a00df9587ce0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a16c37885d0c23ab2682f89b7c33e82d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrf_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_color.html#a16c37885d0c23ab2682f89b7c33e82d1">add</a> (<a class="el" href="classrf_1_1_color.html">Color</a> c)</td></tr>
 <tr class="separator:a16c37885d0c23ab2682f89b7c33e82d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca8be9f8711cb185ed282fc51dad7de2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrf_1_1_color.html">Color</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_color.html#aca8be9f8711cb185ed282fc51dad7de2">sub</a> (<a class="el" href="classrf_1_1_color.html">Color</a> c)</td></tr>
@@ -142,7 +144,7 @@ Public Attributes</h2></td></tr>
 <p>This class is tailored for use with BearLibTerminal </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a62ab7e90ee85519b2ce3cc5e97da7a62"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a62ab7e90ee85519b2ce3cc5e97da7a62">&#9670;&nbsp;</a></span>Color() <span class="overload">[1/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a62ab7e90ee85519b2ce3cc5e97da7a62">&#9670;&nbsp;</a></span>Color() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -156,8 +158,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a <a class="el" href="classrf_1_1_color.html" title="Color class in RGB format. ">Color</a> instance with the input greyscale value</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a <a class="el" href="classrf_1_1_color.html" title="Color class in RGB format. ">Color</a> instance with the input greyscale value </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">G</td><td>Greyscale </td></tr>
   </table>
@@ -167,7 +168,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a044d5b87b6faccb98cabe2d8cea2bcc9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a044d5b87b6faccb98cabe2d8cea2bcc9">&#9670;&nbsp;</a></span>Color() <span class="overload">[2/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a044d5b87b6faccb98cabe2d8cea2bcc9">&#9670;&nbsp;</a></span>Color() <span class="overload">[2/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,8 +198,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a <a class="el" href="classrf_1_1_color.html" title="Color class in RGB format. ">Color</a> instance with the input RGB color</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a <a class="el" href="classrf_1_1_color.html" title="Color class in RGB format. ">Color</a> instance with the input RGB color </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">R</td><td>Red color content </td></tr>
     <tr><td class="paramname">G</td><td>Green color content </td></tr>
@@ -210,7 +210,7 @@ Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="ad0bd3cd4ea3e981844fbc54f78678f89"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad0bd3cd4ea3e981844fbc54f78678f89">&#9670;&nbsp;</a></span>Color() <span class="overload">[3/3]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0bd3cd4ea3e981844fbc54f78678f89">&#9670;&nbsp;</a></span>Color() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,10 +224,33 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Creates a <a class="el" href="classrf_1_1_color.html" title="Color class in RGB format. ">Color</a> instance based on a hex code</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Creates a <a class="el" href="classrf_1_1_color.html" title="Color class in RGB format. ">Color</a> instance based on a hex code </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">hex</td><td>Hex color (0xRRGGBB format) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8286eee799c0b05877a00df9587ce0b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8286eee799c0b05877a00df9587ce0b2">&#9670;&nbsp;</a></span>Color() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">rf::Color::Color </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>hexString</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Creates a <a class="el" href="classrf_1_1_color.html" title="Color class in RGB format. ">Color</a> instance based on a hex string </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">hexString</td><td>Hex color (0xRRGGBB format) </td></tr>
   </table>
   </dd>
 </dl>
@@ -250,8 +273,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Adds a color instance to another</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Adds a color instance to another </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>Another color </td></tr>
   </table>
@@ -276,8 +298,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Multiplies the color with a floating point value</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Multiplies the color with a floating point value </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">factor</td><td>Gain factor </td></tr>
   </table>
@@ -302,8 +323,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Subtracts a color instance by another</p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Subtracts a color instance by another </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">c</td><td>Another color </td></tr>
   </table>
@@ -327,14 +347,7 @@ Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Converts the RGB content to a hex code, suitable for use with BearLibTerminal</p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">factor</td><td>Gain factor </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Hex color (BearLibTerminal's 0xAARRGGBB format) </dd></dl>
+<p>Converts the RGB content to a hex code, suitable for use with BearLibTerminal </p><dl class="section return"><dt>Returns</dt><dd>Hex color (BearLibTerminal's 0xAARRGGBB format) </dd></dl>
 
 </div>
 </div>
