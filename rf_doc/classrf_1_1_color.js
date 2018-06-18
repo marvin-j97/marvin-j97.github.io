@@ -9,6 +9,7 @@ var classrf_1_1_color =
     [ "mult", "classrf_1_1_color.html#a95c28904557d08ccccc33b2741e69cea", null ],
     [ "sub", "classrf_1_1_color.html#aca8be9f8711cb185ed282fc51dad7de2", null ],
     [ "toBLTHex", "classrf_1_1_color.html#aca50c23eb3542f3ae5c1a3a3dba613d5", null ],
+    [ "toString", "classrf_1_1_color.html#a5baaa19ebe3a0693daec63cbf4b3ba58", null ],
     [ "b", "classrf_1_1_color.html#aa5284076d994c92d7a1d1df4525b1bdf", null ],
     [ "g", "classrf_1_1_color.html#a02125b58c6c85c470d62af97902ce538", null ],
     [ "r", "classrf_1_1_color.html#a43025173d59b83f57055528495ea768b", null ]
