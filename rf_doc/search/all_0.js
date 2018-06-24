@@ -14,6 +14,7 @@ var searchData=
   ['_5fmap_5fdim',['_MAP_DIM',['../namespacerf.html#a9a611e76b7e064b7e094c4dca03b08a4',1,'rf']]],
   ['_5fmap_5foffset',['_MAP_OFFSET',['../namespacerf.html#a22e837a49cdda2127188f621bf35ba37',1,'rf']]],
   ['_5fmap_5fport',['_MAP_PORT',['../namespacerf.html#a4a31cde2b2d9fe287f25649b72629453',1,'rf']]],
+  ['_5fpalette',['_PALETTE',['../namespacerf.html#a841136d35abe24e2a8db9568e0c48397',1,'rf']]],
   ['_5fplayer_5fcan_5fexplore',['_PLAYER_CAN_EXPLORE',['../namespacerf.html#a6fb995c07c78ccc31f51ada18c692389',1,'rf']]],
   ['_5fplayer_5fview_5fradius',['_PLAYER_VIEW_RADIUS',['../namespacerf.html#a804269731b48c13f60566996c7889594',1,'rf']]],
   ['_5fuse_5ffov',['_USE_FOV',['../namespacerf.html#a83eb620b3bb744832a95ebc681505f7c',1,'rf']]]

@@ -9,6 +9,7 @@ var classrf_1_1_inventory =
     [ "dropItem", "classrf_1_1_inventory.html#aa70fa85ecc80c3698530e5de37052c07", null ],
     [ "dropItem", "classrf_1_1_inventory.html#aad9aac8d4e4dd9b7539b3dc4be52c5cf", null ],
     [ "getAllItems", "classrf_1_1_inventory.html#a06890ce6123a39ec47dad3accc5c0831", null ],
+    [ "getOwner", "classrf_1_1_inventory.html#aad55214ab13ca6ff06742080778957f2", null ],
     [ "hasSpace", "classrf_1_1_inventory.html#a697dd37f8fb8c7db855d7b9fab3baad7", null ],
     [ "isEmpty", "classrf_1_1_inventory.html#ae2a953ffdf670468214d3844c9b5d4b4", null ],
     [ "removeItem", "classrf_1_1_inventory.html#a4d4eaa41c1292bd268ef792857a8f3db", null ],

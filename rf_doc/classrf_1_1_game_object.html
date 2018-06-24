@@ -160,11 +160,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5243b885295cd24bc046866af75dc566"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_game_object.html#a5243b885295cd24bc046866af75dc566">exists</a> (std::string interaction)</td></tr>
 <tr class="memdesc:a5243b885295cd24bc046866af75dc566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aggregates all components' data to a list of strings based on the interaction flag.  <a href="#a5243b885295cd24bc046866af75dc566">More...</a><br /></td></tr>
 <tr class="separator:a5243b885295cd24bc046866af75dc566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a5b385efecd066de9759a301bffc033"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classrf_1_1_component.html">Component</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_game_object.html#a2a5b385efecd066de9759a301bffc033">getComponent</a> (std::string name)</td></tr>
+<tr class="memdesc:a2a5b385efecd066de9759a301bffc033"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a certain component.  <a href="#a2a5b385efecd066de9759a301bffc033">More...</a><br /></td></tr>
+<tr class="separator:a2a5b385efecd066de9759a301bffc033"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8bd839a3cbfca4fd24161e290d6229c9"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classrf_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_game_object.html#a8bd839a3cbfca4fd24161e290d6229c9">getComponents</a> ()</td></tr>
+<tr class="memdesc:a8bd839a3cbfca4fd24161e290d6229c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a list of all components attached by this object.  <a href="#a8bd839a3cbfca4fd24161e290d6229c9">More...</a><br /></td></tr>
 <tr class="separator:a8bd839a3cbfca4fd24161e290d6229c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acf37037afd13d99148a13f25c3a82408"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classrf_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_game_object.html#acf37037afd13d99148a13f25c3a82408">filterComponents</a> (<a class="el" href="namespacerf.html#a9b88535fdd345bc821d58886bb78d35f">ComponentFilter</a> condition)</td></tr>
-<tr class="memdesc:acf37037afd13d99148a13f25c3a82408"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a filtered list of all components attached by this object.  <a href="#acf37037afd13d99148a13f25c3a82408">More...</a><br /></td></tr>
-<tr class="separator:acf37037afd13d99148a13f25c3a82408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d81fb4b372fd03e8250842c0198466e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classrf_1_1_component.html">Component</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_game_object.html#a7d81fb4b372fd03e8250842c0198466e">getComponents</a> (<a class="el" href="namespacerf.html#a9b88535fdd345bc821d58886bb78d35f">ComponentFilter</a> condition)</td></tr>
+<tr class="memdesc:a7d81fb4b372fd03e8250842c0198466e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a filtered list of all components attached by this object.  <a href="#a7d81fb4b372fd03e8250842c0198466e">More...</a><br /></td></tr>
+<tr class="separator:a7d81fb4b372fd03e8250842c0198466e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -460,14 +464,61 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
-<a id="acf37037afd13d99148a13f25c3a82408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acf37037afd13d99148a13f25c3a82408">&#9670;&nbsp;</a></span>filterComponents()</h2>
+<a id="a2a5b385efecd066de9759a301bffc033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a5b385efecd066de9759a301bffc033">&#9670;&nbsp;</a></span>getComponent()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classrf_1_1_component.html">Component</a>*&gt; rf::GameObject::filterComponents </td>
+          <td class="memname"><a class="el" href="classrf_1_1_component.html">Component</a>* rf::GameObject::getComponent </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a certain component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">name</td><td><a class="el" href="classrf_1_1_component.html" title="Base component class. ">Component</a> name </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classrf_1_1_component.html" title="Base component class. ">Component</a>, or NULL if not found </dd></dl>
+
+</div>
+</div>
+<a id="a8bd839a3cbfca4fd24161e290d6229c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bd839a3cbfca4fd24161e290d6229c9">&#9670;&nbsp;</a></span>getComponents() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classrf_1_1_component.html">Component</a>*&gt; rf::GameObject::getComponents </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets a list of all components attached by this object. </p>
+<dl class="section return"><dt>Returns</dt><dd>List of components </dd></dl>
+
+</div>
+</div>
+<a id="a7d81fb4b372fd03e8250842c0198466e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7d81fb4b372fd03e8250842c0198466e">&#9670;&nbsp;</a></span>getComponents() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classrf_1_1_component.html">Component</a>*&gt; rf::GameObject::getComponents </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="namespacerf.html#a9b88535fdd345bc821d58886bb78d35f">ComponentFilter</a>&#160;</td>
           <td class="paramname"><em>condition</em></td><td>)</td>
@@ -484,24 +535,6 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classrf_1_1_component.html" title="Base component class. ">Component</a> list </dd></dl>
-
-</div>
-</div>
-<a id="a8bd839a3cbfca4fd24161e290d6229c9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8bd839a3cbfca4fd24161e290d6229c9">&#9670;&nbsp;</a></span>getComponents()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;<a class="el" href="classrf_1_1_component.html">Component</a>*&gt; rf::GameObject::getComponents </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Gets a list of all components attached by this object </p><dl class="section return"><dt>Returns</dt><dd>List of components </dd></dl>
 
 </div>
 </div>
