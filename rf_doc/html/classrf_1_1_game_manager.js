@@ -37,6 +37,6 @@ var classrf_1_1_game_manager =
     [ "spawnPlayer", "classrf_1_1_game_manager.html#a672b824cb2a494de2bb3a3f7b7f2d6fc", null ],
     [ "teleportObject", "classrf_1_1_game_manager.html#a4930251ee9b3bcff82d4a70ec262ae81", null ],
     [ "update", "classrf_1_1_game_manager.html#ab7828bc5c2b40a13ef2bedc569179d5d", null ],
-    [ "messageLog", "classrf_1_1_game_manager.html#af68a4b2dbc27b6d1fa68854bebe2e91e", null ],
+    [ "messageLog", "classrf_1_1_game_manager.html#a6ae819dd90bb94a5191e1a38962c70bd", null ],
     [ "player", "classrf_1_1_game_manager.html#a807e075035ca2fae635dc48c4030624c", null ]
 ];

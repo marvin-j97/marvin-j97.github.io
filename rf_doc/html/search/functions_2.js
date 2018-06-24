@@ -5,7 +5,7 @@ var searchData=
   ['damageovertime',['DamageOverTime',['../classrf_1_1cmp_1_1_damage_over_time.html#a6a9b73ffc443c55f9090830bcf897dab',1,'rf::cmp::DamageOverTime']]],
   ['deleteobject',['deleteObject',['../classrf_1_1_game_manager.html#ae73490c60c07111eea58aa055f4eceb0',1,'rf::GameManager']]],
   ['detach',['detach',['../classrf_1_1_component.html#a481a46675dc02393038803ebb88d47d1',1,'rf::Component']]],
-  ['display',['display',['../classrf_1_1_message.html#a1da93b107b02370117163e498180b63c',1,'rf::Message']]],
+  ['display',['display',['../classrf_1_1ui_1_1_inventory_handler.html#a9126d1cf04956c08bed5472786e4fe58',1,'rf::ui::InventoryHandler::display()'],['../classrf_1_1ui_1_1_message.html#a07b6cebe7a8549a5426924e2e0f5bd6b',1,'rf::ui::Message::display()']]],
   ['displaylogic',['DisplayLogic',['../classrf_1_1cmp_1_1_display_logic.html#adbb8e96b5c84162169fea8721c0b9a87',1,'rf::cmp::DisplayLogic::DisplayLogic(wchar_t g, std::string d)'],['../classrf_1_1cmp_1_1_display_logic.html#a8a6055dc9c2fceedfd0baa7aa920bd38',1,'rf::cmp::DisplayLogic::DisplayLogic(wchar_t g, std::string d, Color fg)'],['../classrf_1_1cmp_1_1_display_logic.html#a19fdab9dec048c3a84b600c6e8840340',1,'rf::cmp::DisplayLogic::DisplayLogic(wchar_t g, std::string d, Color fg, Color bg)']]],
   ['doorlogic',['DoorLogic',['../classrf_1_1cmp_1_1_door_logic.html#a188566cf8c26faaa94ec1a850cc4597b',1,'rf::cmp::DoorLogic::DoorLogic()'],['../classrf_1_1cmp_1_1_door_logic.html#afa8839609a4a20124ce52e5087c7b65f',1,'rf::cmp::DoorLogic::DoorLogic(std::string o, std::string c)']]],
   ['dotproduct',['DotProduct',['../structrf_1_1_vector2.html#a30ac651b7e8469ab837ba5923f8bcede',1,'rf::Vector2']]],

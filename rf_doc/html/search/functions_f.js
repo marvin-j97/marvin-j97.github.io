@@ -17,7 +17,7 @@ var searchData=
   ['setspace',['setSpace',['../classrf_1_1_inventory.html#ad66a255f549683d84324b56c8bfcf12c',1,'rf::Inventory']]],
   ['showdescription',['showDescription',['../classrf_1_1_wizard_command.html#a4bb186b30441c37704e353b2c69bbac4',1,'rf::WizardCommand']]],
   ['showhelp',['showHelp',['../classrf_1_1_wizard_command.html#a83b33979b2f56132125b8c43efb423e2',1,'rf::WizardCommand']]],
-  ['showmessages',['showMessages',['../classrf_1_1_message_log.html#aa03a2b2eb9d455ed7c67e38d23310f59',1,'rf::MessageLog']]],
+  ['showmessages',['showMessages',['../classrf_1_1ui_1_1_message_log.html#a23eb15814c92eba39dfa7e44021f3eef',1,'rf::ui::MessageLog']]],
   ['solidat',['solidAt',['../classrf_1_1_game_manager.html#a4f86eebc8e45bd1eaf1e4958f9e934fb',1,'rf::GameManager::solidAt()'],['../classrf_1_1_map.html#a2c55aace14962fd92e2a3a7a030ef588',1,'rf::Map::solidAt()']]],
   ['sound',['Sound',['../structrf_1_1snd_1_1_sound.html#aed6b7fb3f6b7105f46de98c546df6dcd',1,'rf::snd::Sound']]],
   ['soundhandler',['SoundHandler',['../classrf_1_1snd_1_1_sound_handler.html#ace57278ff1003724dbd4b8b0d1465ce5',1,'rf::snd::SoundHandler']]],
