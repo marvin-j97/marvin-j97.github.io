@@ -5,5 +5,5 @@ var classrf_1_1_palette =
     [ "add", "classrf_1_1_palette.html#a3193ef30f3fa819a72af626a8bc82acf", null ],
     [ "add", "classrf_1_1_palette.html#a25ff910964ebbb7d4e706fa904ccbed4", null ],
     [ "get", "classrf_1_1_palette.html#adf13ffe8d5edfc8969024ebaa19d9240", null ],
-    [ "getHex", "classrf_1_1_palette.html#aeb18910a40b07a5b7b0dfa34ec3eb925", null ]
+    [ "getHex", "classrf_1_1_palette.html#a111124f67fd8777311a1a8daeb7f244d", null ]
 ];

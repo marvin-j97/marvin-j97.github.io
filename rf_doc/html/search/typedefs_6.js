@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['uint',['uint',['../namespacerf.html#a0a79f0071fa2dff200be5d22a9e10fa1',1,'rf']]]
+  ['stringlist',['StringList',['../namespacerf.html#a5ada9c3c92fcaf26aad5dba89332695d',1,'rf']]]
 ];

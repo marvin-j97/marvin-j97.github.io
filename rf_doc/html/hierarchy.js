@@ -6,9 +6,11 @@ var hierarchy =
       [ "rf::cmp::CombatLogic", "classrf_1_1cmp_1_1_combat_logic.html", null ],
       [ "rf::cmp::DisplayLogic", "classrf_1_1cmp_1_1_display_logic.html", null ],
       [ "rf::cmp::DoorLogic", "classrf_1_1cmp_1_1_door_logic.html", null ],
+      [ "rf::cmp::Input", "classrf_1_1cmp_1_1_input.html", [
+        [ "rf::cmp::PlayerInput", "classrf_1_1cmp_1_1_player_input.html", null ]
+      ] ],
       [ "rf::cmp::ItemLogic", "classrf_1_1cmp_1_1_item_logic.html", null ],
       [ "rf::cmp::MonsterLogic", "classrf_1_1cmp_1_1_monster_logic.html", null ],
-      [ "rf::cmp::PlayerInput", "classrf_1_1cmp_1_1_player_input.html", null ],
       [ "rf::cmp::StatusEffect", "classrf_1_1cmp_1_1_status_effect.html", [
         [ "rf::cmp::DamageOverTime", "classrf_1_1cmp_1_1_damage_over_time.html", null ]
       ] ],
