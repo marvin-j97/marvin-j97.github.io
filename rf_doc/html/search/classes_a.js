@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vector2',['Vector2',['../structrf_1_1_vector2.html',1,'rf']]],
-  ['vector2_3c_20int_20_3e',['Vector2&lt; int &gt;',['../structrf_1_1_vector2.html',1,'rf']]]
+  ['textinput',['TextInput',['../structrf_1_1_text_input.html',1,'rf']]],
+  ['traplogic',['TrapLogic',['../classrf_1_1cmp_1_1_trap_logic.html',1,'rf::cmp']]]
 ];

@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['packet',['Packet',['../classrf_1_1_packet.html',1,'rf']]],
-  ['palette',['Palette',['../classrf_1_1_palette.html',1,'rf']]],
-  ['playerinput',['PlayerInput',['../classrf_1_1cmp_1_1_player_input.html',1,'rf::cmp']]]
+  ['nav',['Nav',['../structrf_1_1path_1_1_nav.html',1,'rf::path']]]
 ];

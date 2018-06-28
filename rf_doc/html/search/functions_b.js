@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['map',['Map',['../classrf_1_1_map.html#aa841b5c24898e534b5419174d8b65c03',1,'rf::Map::Map()'],['../classrf_1_1_matrix.html#a87565f26b8f81bd7266ded8055d62968',1,'rf::Matrix::map()']]],
+  ['map',['map',['../classrf_1_1_matrix.html#a87565f26b8f81bd7266ded8055d62968',1,'rf::Matrix::map()'],['../classrf_1_1_map.html#aa841b5c24898e534b5419174d8b65c03',1,'rf::Map::Map()']]],
   ['matmult',['matMult',['../classrf_1_1_matrix.html#af175b2658af9767a26857dc7bb8a4b10',1,'rf::Matrix']]],
   ['matrix',['Matrix',['../classrf_1_1_matrix.html#aa9c874d766347365b9df838f883b9aa3',1,'rf::Matrix::Matrix()'],['../classrf_1_1_matrix.html#a70af1316d0098bb9bd9f232b817173ed',1,'rf::Matrix::Matrix(int rows, int cols)'],['../classrf_1_1_matrix.html#a7d9f48101c3b392e5f02e64995e9beeb',1,'rf::Matrix::Matrix(Vector2&lt; int &gt; dim)'],['../classrf_1_1_matrix.html#accb5824e965edcf9593d3865cbb7c697',1,'rf::Matrix::Matrix(const Matrix&lt; T &gt; &amp;other)']]],
   ['message',['Message',['../classrf_1_1ui_1_1_message.html#a1d1edf6450acf0a08c9ab6d395397f2b',1,'rf::ui::Message::Message(std::string text)'],['../classrf_1_1ui_1_1_message.html#a22a36c879462145c9600c01dc06dac34',1,'rf::ui::Message::Message(std::string text, rf::Color f)'],['../classrf_1_1ui_1_1_message.html#a42582f80bd771cc57e696bb5eb3b678e',1,'rf::ui::Message::Message(std::string text, rf::Color f, rf::Color b)']]],

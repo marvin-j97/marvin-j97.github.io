@@ -10,7 +10,9 @@ var hierarchy =
         [ "rf::cmp::PlayerInput", "classrf_1_1cmp_1_1_player_input.html", null ]
       ] ],
       [ "rf::cmp::ItemLogic", "classrf_1_1cmp_1_1_item_logic.html", null ],
+      [ "rf::cmp::KeyLogic", "classrf_1_1cmp_1_1_key_logic.html", null ],
       [ "rf::cmp::MonsterLogic", "classrf_1_1cmp_1_1_monster_logic.html", null ],
+      [ "rf::cmp::Moveable", "classrf_1_1cmp_1_1_moveable.html", null ],
       [ "rf::cmp::StatusEffect", "classrf_1_1cmp_1_1_status_effect.html", [
         [ "rf::cmp::DamageOverTime", "classrf_1_1cmp_1_1_damage_over_time.html", null ]
       ] ],

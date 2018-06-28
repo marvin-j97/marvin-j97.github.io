@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.14"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>roguelike-foundation-cpp: rf::cmp::CombatLogic Class Reference</title>
+<title>roguelike-foundation-cpp: rf::cmp::KeyLogic Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
-$(document).ready(function(){initNavTree('classrf_1_1cmp_1_1_combat_logic.html','');});
+$(document).ready(function(){initNavTree('classrf_1_1cmp_1_1_key_logic.html','');});
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -89,37 +89,38 @@ $(document).ready(function(){initNavTree('classrf_1_1cmp_1_1_combat_logic.html',
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="classrf_1_1cmp_1_1_combat_logic-members.html">List of all members</a>  </div>
+<a href="classrf_1_1cmp_1_1_key_logic-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">rf::cmp::CombatLogic Class Reference</div>  </div>
+<div class="title">rf::cmp::KeyLogic Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p>Basic Combat <a class="el" href="classrf_1_1_component.html" title="Base component class. ">Component</a>.  
- <a href="classrf_1_1cmp_1_1_combat_logic.html#details">More...</a></p>
+<p>Gives the object the ability to (un)lock doors.  
+ <a href="classrf_1_1cmp_1_1_key_logic.html#details">More...</a></p>
 
-<p><code>#include &lt;CombatLogic.h&gt;</code></p>
+<p><code>#include &lt;KeyLogic.h&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for rf::cmp::CombatLogic:</div>
+Inheritance diagram for rf::cmp::KeyLogic:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classrf_1_1cmp_1_1_combat_logic.png" usemap="#rf::cmp::CombatLogic_map" alt=""/>
-  <map id="rf::cmp::CombatLogic_map" name="rf::cmp::CombatLogic_map">
-<area href="classrf_1_1_component.html" title="Base component class. " alt="rf::Component" shape="rect" coords="0,0,129,24"/>
+  <img src="classrf_1_1cmp_1_1_key_logic.png" usemap="#rf::cmp::KeyLogic_map" alt=""/>
+  <map id="rf::cmp::KeyLogic_map" name="rf::cmp::KeyLogic_map">
+<area href="classrf_1_1_component.html" title="Base component class. " alt="rf::Component" shape="rect" coords="0,0,109,24"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a760ae1a47fb425bd652e884efa366b4c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_combat_logic.html#a760ae1a47fb425bd652e884efa366b4c">CombatLogic</a> (int h, int d)</td></tr>
-<tr class="memdesc:a760ae1a47fb425bd652e884efa366b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new <a class="el" href="classrf_1_1cmp_1_1_combat_logic.html" title="Basic Combat Component. ">CombatLogic</a> component.  <a href="#a760ae1a47fb425bd652e884efa366b4c">More...</a><br /></td></tr>
-<tr class="separator:a760ae1a47fb425bd652e884efa366b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2c90b3852e29a87243f06c8d98f69a4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_combat_logic.html#a2c90b3852e29a87243f06c8d98f69a4e">interact</a> (<a class="el" href="classrf_1_1_packet.html">Packet</a> p) override</td></tr>
-<tr class="memdesc:a2c90b3852e29a87243f06c8d98f69a4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles interaction(s) it receives from its owner.  <a href="#a2c90b3852e29a87243f06c8d98f69a4e">More...</a><br /></td></tr>
-<tr class="separator:a2c90b3852e29a87243f06c8d98f69a4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab2b9873e7ecb61555c5611d9a330afd4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_combat_logic.html#ab2b9873e7ecb61555c5611d9a330afd4">getInt</a> (std::string interaction) override</td></tr>
-<tr class="memdesc:ab2b9873e7ecb61555c5611d9a330afd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns data based on the input interaction flag:  <a href="#ab2b9873e7ecb61555c5611d9a330afd4">More...</a><br /></td></tr>
-<tr class="separator:ab2b9873e7ecb61555c5611d9a330afd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76e9aa8b59f36acab1a4d336d29d4ce8"><td class="memItemLeft" align="right" valign="top"><a id="a76e9aa8b59f36acab1a4d336d29d4ce8"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_key_logic.html#a76e9aa8b59f36acab1a4d336d29d4ce8">KeyLogic</a> ()</td></tr>
+<tr class="memdesc:a76e9aa8b59f36acab1a4d336d29d4ce8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Key component with default lock level (0) <br /></td></tr>
+<tr class="separator:a76e9aa8b59f36acab1a4d336d29d4ce8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6250719e8d6f3ea31f88b1088b5a66bc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_key_logic.html#a6250719e8d6f3ea31f88b1088b5a66bc">KeyLogic</a> (int lvl)</td></tr>
+<tr class="memdesc:a6250719e8d6f3ea31f88b1088b5a66bc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Key component with a certain (un)lock level.  <a href="#a6250719e8d6f3ea31f88b1088b5a66bc">More...</a><br /></td></tr>
+<tr class="separator:a6250719e8d6f3ea31f88b1088b5a66bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad75526d4b4489d3c0e162e8962aefcf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_key_logic.html#ad75526d4b4489d3c0e162e8962aefcf4">interact</a> (<a class="el" href="classrf_1_1_packet.html">Packet</a> p) override</td></tr>
+<tr class="memdesc:ad75526d4b4489d3c0e162e8962aefcf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Receives an interaction packet from its owner.  <a href="#ad75526d4b4489d3c0e162e8962aefcf4">More...</a><br /></td></tr>
+<tr class="separator:ad75526d4b4489d3c0e162e8962aefcf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classrf_1_1_component"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classrf_1_1_component')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classrf_1_1_component.html">rf::Component</a></td></tr>
 <tr class="memitem:a17f3258b9198313d2a80b3611db80827 inherit pub_methods_classrf_1_1_component"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_component.html#a17f3258b9198313d2a80b3611db80827">getName</a> ()</td></tr>
 <tr class="memdesc:a17f3258b9198313d2a80b3611db80827 inherit pub_methods_classrf_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the component's name.  <a href="classrf_1_1_component.html#a17f3258b9198313d2a80b3611db80827">More...</a><br /></td></tr>
@@ -135,6 +136,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_component.html#a37b261f659799cc52fc5e7dacc8bd0ed">update</a> ()</td></tr>
 <tr class="memdesc:a37b261f659799cc52fc5e7dacc8bd0ed inherit pub_methods_classrf_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets called every tick. <br /></td></tr>
 <tr class="separator:a37b261f659799cc52fc5e7dacc8bd0ed inherit pub_methods_classrf_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b03e5f90e2fb83e8c815c88d8799a37 inherit pub_methods_classrf_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_component.html#a9b03e5f90e2fb83e8c815c88d8799a37">getInt</a> (std::string interaction)</td></tr>
+<tr class="memdesc:a9b03e5f90e2fb83e8c815c88d8799a37 inherit pub_methods_classrf_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns an int based on the input interaction flag.  <a href="classrf_1_1_component.html#a9b03e5f90e2fb83e8c815c88d8799a37">More...</a><br /></td></tr>
+<tr class="separator:a9b03e5f90e2fb83e8c815c88d8799a37 inherit pub_methods_classrf_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab81c09edc702a828e7f30907ce0620e4 inherit pub_methods_classrf_1_1_component"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1_component.html#ab81c09edc702a828e7f30907ce0620e4">getDouble</a> (std::string interaction)</td></tr>
 <tr class="memdesc:ab81c09edc702a828e7f30907ce0620e4 inherit pub_methods_classrf_1_1_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a double based on the input interaction flag.  <a href="classrf_1_1_component.html#ab81c09edc702a828e7f30907ce0620e4">More...</a><br /></td></tr>
 <tr class="separator:ab81c09edc702a828e7f30907ce0620e4 inherit pub_methods_classrf_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,39 +160,36 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <tr class="separator:a7f147b5c810266a8c4827effdee9688e inherit pro_attribs_classrf_1_1_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Basic Combat <a class="el" href="classrf_1_1_component.html" title="Base component class. ">Component</a>. </p>
+<div class="textblock"><p>Gives the object the ability to (un)lock doors. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a760ae1a47fb425bd652e884efa366b4c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a760ae1a47fb425bd652e884efa366b4c">&#9670;&nbsp;</a></span>CombatLogic()</h2>
+<a id="a6250719e8d6f3ea31f88b1088b5a66bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6250719e8d6f3ea31f88b1088b5a66bc">&#9670;&nbsp;</a></span>KeyLogic()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">rf::cmp::CombatLogic::CombatLogic </td>
+          <td class="memname">rf::cmp::KeyLogic::KeyLogic </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>h</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"><em>lvl</em></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>d</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Creates a new <a class="el" href="classrf_1_1cmp_1_1_combat_logic.html" title="Basic Combat Component. ">CombatLogic</a> component. </p>
+<p>Creates a new Key component with a certain (un)lock level. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">h</td><td>Starting and maximum health points </td></tr>
-    <tr><td class="paramname">d</td><td>Base damage </td></tr>
+    <tr><td class="paramname">lvl</td><td>(Un)lock level </td></tr>
   </table>
   </dd>
 </dl>
@@ -196,8 +197,8 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ab2b9873e7ecb61555c5611d9a330afd4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab2b9873e7ecb61555c5611d9a330afd4">&#9670;&nbsp;</a></span>getInt()</h2>
+<a id="ad75526d4b4489d3c0e162e8962aefcf4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad75526d4b4489d3c0e162e8962aefcf4">&#9670;&nbsp;</a></span>interact()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -206,44 +207,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int rf::cmp::CombatLogic::getInt </td>
-          <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
-          <td class="paramname"><em>interaction</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Returns data based on the input interaction flag: </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">interaction</td><td>Interaction flag </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
-
-<p>Reimplemented from <a class="el" href="classrf_1_1_component.html#a9b03e5f90e2fb83e8c815c88d8799a37">rf::Component</a>.</p>
-
-</div>
-</div>
-<a id="a2c90b3852e29a87243f06c8d98f69a4e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2c90b3852e29a87243f06c8d98f69a4e">&#9670;&nbsp;</a></span>interact()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void rf::cmp::CombatLogic::interact </td>
+          <td class="memname">void rf::cmp::KeyLogic::interact </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classrf_1_1_packet.html">Packet</a>&#160;</td>
           <td class="paramname"><em>p</em></td><td>)</td>
@@ -257,7 +221,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 </table>
 </div><div class="memdoc">
 
-<p>Handles interaction(s) it receives from its owner. </p>
+<p>Receives an interaction packet from its owner. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p</td><td>Interaction packet </td></tr>
@@ -274,7 +238,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="namespacerf.html">rf</a></li><li class="navelem"><a class="el" href="namespacerf_1_1cmp.html">cmp</a></li><li class="navelem"><a class="el" href="classrf_1_1cmp_1_1_combat_logic.html">CombatLogic</a></li>
+    <li class="navelem"><a class="el" href="namespacerf.html">rf</a></li><li class="navelem"><a class="el" href="namespacerf_1_1cmp.html">cmp</a></li><li class="navelem"><a class="el" href="classrf_1_1cmp_1_1_key_logic.html">KeyLogic</a></li>
     <li class="footer">Generated by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.14 </li>

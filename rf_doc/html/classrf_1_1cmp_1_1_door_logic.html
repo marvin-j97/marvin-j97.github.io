@@ -118,6 +118,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:afa8839609a4a20124ce52e5087c7b65f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_door_logic.html#afa8839609a4a20124ce52e5087c7b65f">DoorLogic</a> (std::string o, std::string c)</td></tr>
 <tr class="memdesc:afa8839609a4a20124ce52e5087c7b65f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new Door component.  <a href="#afa8839609a4a20124ce52e5087c7b65f">More...</a><br /></td></tr>
 <tr class="separator:afa8839609a4a20124ce52e5087c7b65f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81f211e229e0f10e59f34506819bd1f8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_door_logic.html#a81f211e229e0f10e59f34506819bd1f8">DoorLogic</a> (std::string o, std::string c, bool lock, int lvl)</td></tr>
+<tr class="memdesc:a81f211e229e0f10e59f34506819bd1f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new locked Door component.  <a href="#a81f211e229e0f10e59f34506819bd1f8">More...</a><br /></td></tr>
+<tr class="separator:a81f211e229e0f10e59f34506819bd1f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9aa6ebe3cfc7183bae4b28627884dc92"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_door_logic.html#a9aa6ebe3cfc7183bae4b28627884dc92">setLockLevel</a> (int level)</td></tr>
+<tr class="memdesc:a9aa6ebe3cfc7183bae4b28627884dc92"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the lock level (difficulty)  <a href="#a9aa6ebe3cfc7183bae4b28627884dc92">More...</a><br /></td></tr>
+<tr class="separator:a9aa6ebe3cfc7183bae4b28627884dc92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a40bbaf6ebe2671b4ccc368ce70e5b4b0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classrf_1_1cmp_1_1_door_logic.html#a40bbaf6ebe2671b4ccc368ce70e5b4b0">interact</a> (<a class="el" href="classrf_1_1_packet.html">Packet</a> p) override</td></tr>
 <tr class="memdesc:a40bbaf6ebe2671b4ccc368ce70e5b4b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles interaction(s) it receives from its owner:  <a href="#a40bbaf6ebe2671b4ccc368ce70e5b4b0">More...</a><br /></td></tr>
 <tr class="separator:a40bbaf6ebe2671b4ccc368ce70e5b4b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,7 +169,7 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <div class="textblock"><p>Basic Door <a class="el" href="classrf_1_1_component.html" title="Base component class. ">Component</a>. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afa8839609a4a20124ce52e5087c7b65f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afa8839609a4a20124ce52e5087c7b65f">&#9670;&nbsp;</a></span>DoorLogic()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#afa8839609a4a20124ce52e5087c7b65f">&#9670;&nbsp;</a></span>DoorLogic() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -207,6 +213,65 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 
 </div>
 </div>
+<a id="a81f211e229e0f10e59f34506819bd1f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81f211e229e0f10e59f34506819bd1f8">&#9670;&nbsp;</a></span>DoorLogic() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">rf::cmp::DoorLogic::DoorLogic </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>o</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>lock</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lvl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates a new locked Door component. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">o</td><td>Glyph when opened </td></tr>
+    <tr><td class="paramname">c</td><td>Glyph when closed </td></tr>
+    <tr><td class="paramname">lock</td><td>True if the door should start locked </td></tr>
+    <tr><td class="paramname">lvl</td><td>Lock level (difficulty) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a40bbaf6ebe2671b4ccc368ce70e5b4b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a40bbaf6ebe2671b4ccc368ce70e5b4b0">&#9670;&nbsp;</a></span>interact()</h2>
@@ -235,12 +300,46 @@ std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 <p>Handles interaction(s) it receives from its owner: </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">p</td><td>Interaction packet: "DOOR" opens/closes the door </td></tr>
+    <tr><td class="paramname">p</td><td>Interaction packet </td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Reimplemented from <a class="el" href="classrf_1_1_component.html#a14cb5617990f58d171759768f6a9056f">rf::Component</a>.</p>
+
+</div>
+</div>
+<a id="a9aa6ebe3cfc7183bae4b28627884dc92"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9aa6ebe3cfc7183bae4b28627884dc92">&#9670;&nbsp;</a></span>setLockLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void rf::cmp::DoorLogic::setLockLevel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>level</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Sets the lock level (difficulty) </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">level</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>

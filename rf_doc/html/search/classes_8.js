@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['sound',['Sound',['../structrf_1_1snd_1_1_sound.html',1,'rf::snd']]],
-  ['soundhandler',['SoundHandler',['../classrf_1_1snd_1_1_sound_handler.html',1,'rf::snd']]],
-  ['statuseffect',['StatusEffect',['../classrf_1_1cmp_1_1_status_effect.html',1,'rf::cmp']]]
+  ['packet',['Packet',['../classrf_1_1_packet.html',1,'rf']]],
+  ['palette',['Palette',['../classrf_1_1_palette.html',1,'rf']]],
+  ['playerinput',['PlayerInput',['../classrf_1_1cmp_1_1_player_input.html',1,'rf::cmp']]]
 ];
