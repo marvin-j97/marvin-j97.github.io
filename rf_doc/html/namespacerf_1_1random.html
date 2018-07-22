@@ -137,9 +137,9 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="name
 <tr class="memitem:a02de1bad14621e35aad67fcf4016391c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerf_1_1random.html#a02de1bad14621e35aad67fcf4016391c">d20</a> ()</td></tr>
 <tr class="memdesc:a02de1bad14621e35aad67fcf4016391c"><td class="mdescLeft">&#160;</td><td class="mdescRight">20-sided dice  <a href="#a02de1bad14621e35aad67fcf4016391c">More...</a><br /></td></tr>
 <tr class="separator:a02de1bad14621e35aad67fcf4016391c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a292b879426270d1090d761f5b96b0811"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrf_1_1_vector2.html">Vector2</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerf_1_1random.html#a292b879426270d1090d761f5b96b0811">randomPosition</a> ()</td></tr>
-<tr class="memdesc:a292b879426270d1090d761f5b96b0811"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a random direction.  <a href="#a292b879426270d1090d761f5b96b0811">More...</a><br /></td></tr>
-<tr class="separator:a292b879426270d1090d761f5b96b0811"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb12f34de64796a07a6162d880f6ac58"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structrf_1_1_vector2.html">Vector2</a>&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacerf_1_1random.html#abb12f34de64796a07a6162d880f6ac58">randomDirection</a> (bool diagonals)</td></tr>
+<tr class="memdesc:abb12f34de64796a07a6162d880f6ac58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a random direction.  <a href="#abb12f34de64796a07a6162d880f6ac58">More...</a><br /></td></tr>
+<tr class="separator:abb12f34de64796a07a6162d880f6ac58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Noise and randomness. </p>
@@ -507,8 +507,8 @@ template&lt;class T &gt; </div>
 
 </div>
 </div>
-<a id="a292b879426270d1090d761f5b96b0811"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a292b879426270d1090d761f5b96b0811">&#9670;&nbsp;</a></span>randomPosition()</h2>
+<a id="abb12f34de64796a07a6162d880f6ac58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb12f34de64796a07a6162d880f6ac58">&#9670;&nbsp;</a></span>randomDirection()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -517,9 +517,10 @@ template&lt;class T &gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structrf_1_1_vector2.html">Vector2</a>&lt;int&gt; rf::random::randomPosition </td>
+          <td class="memname"><a class="el" href="structrf_1_1_vector2.html">Vector2</a>&lt;int&gt; rf::random::randomDirection </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>diagonals</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -531,7 +532,13 @@ template&lt;class T &gt; </div>
 </div><div class="memdoc">
 
 <p>Returns a random direction. </p>
-<p>Left, right, up, down, etc. </p><dl class="section return"><dt>Returns</dt><dd>Direction </dd></dl>
+<p>Left, right, up, down, etc. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">diagonals</td><td>Allow diagonals </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Direction </dd></dl>
 
 </div>
 </div>

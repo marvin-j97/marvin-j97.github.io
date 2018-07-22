@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['h',['h',['../structrf_1_1path_1_1_nav.html#a9abe9628a49a2f2066d7c0f900ac7151',1,'rf::path::Nav']]]
+  ['g',['g',['../classrf_1_1_color.html#a02125b58c6c85c470d62af97902ce538',1,'rf::Color::g()'],['../structrf_1_1path_1_1_nav.html#aed1029dd0c5b2b8205fc434a94c28d70',1,'rf::path::Nav::g()']]]
 ];

@@ -3,6 +3,7 @@ var searchData=
   ['calcpathmap',['calcPathMap',['../classrf_1_1_map.html#ab024319788acd4e1871d1a3439b88183',1,'rf::Map']]],
   ['calcvismap',['calcVisMap',['../classrf_1_1_game_manager.html#a36372dc2b39ab7cf414bfb6088fe6046',1,'rf::GameManager']]],
   ['chance',['chance',['../namespacerf_1_1random.html#a0cd77b0534d827fd259973536c0038cb',1,'rf::random']]],
+  ['checkfordeath',['checkForDeath',['../classrf_1_1cmp_1_1_combat_logic.html#a1b0a2cfe1a8652b117bd782bcb4d0d4c',1,'rf::cmp::CombatLogic']]],
   ['choose',['choose',['../namespacerf_1_1random.html#a19b754902235f73ff75f7806013194f2',1,'rf::random']]],
   ['circle',['circle',['../classrf_1_1_map.html#a82263df82e643fe66b02954eb6c84020',1,'rf::Map']]],
   ['clear',['clear',['../classrf_1_1_matrix.html#af140f7099ffaa370408777bbefdf9c80',1,'rf::Matrix::clear()'],['../classrf_1_1_matrix.html#ac49b0e6a8115a69432f14d2236b4a3cf',1,'rf::Matrix::clear(T value)']]],

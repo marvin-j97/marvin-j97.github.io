@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['f',['f',['../structrf_1_1path_1_1_nav.html#af274355433b7f96c3ff9b24a7339535f',1,'rf::path::Nav']]]
+  ['exit',['exit',['../classrf_1_1_wizard_mode.html#af48b1b4c51d7c9d914ca71241587ebad',1,'rf::WizardMode']]]
 ];
