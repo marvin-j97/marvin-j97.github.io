@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>JS Editor</title>
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+    #console {
+      position: fixed;
+      left:49px;
+      bottom: 0px;
+      right: 0;
+      height: 140px;
+      background-color: #050505;
+      color: #fafafa;
+      font-size: 16px;
+      z-index: 101;
+      overflow-y: scroll;
+      padding: 5px;
+    }
+    #run {
+      position: fixed;
+      left:0px;
+      bottom: 0px;
+      background-color: green;
+      z-index: 100;
+      padding: 10px;
+    }
+    #clear {
+      position: fixed;
+      left:0px;
+      bottom: 112px;
+      background-color: lightblue;
+      z-index: 100;
+      padding: 10px;
+    }
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  
+<div id="clear"><b>CLR</b></div>
+<div id="run"><b>Run</b></div>
+
+<div id="editor">print("Hello world!")</div>
+
+<div id="console"></div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    const print = function (message) {
+      if (typeof message == 'object') {
+          logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
+      } else {
+          logger.innerHTML += message + '<br />';
+      }
+    }
+
+    const editor = ace.edit("editor");
+    editor.setTheme("ace/theme/monokai");
+    editor.session.setMode("ace/mode/javascript");
+    editor.setFontSize(16);
+    const logger = document.getElementById('console');
+
+    document.getElementById("run").addEventListener("click", () => {
+      eval(editor.getValue());
+    });
+
+    document.getElementById("clear").addEventListener("click", () => {
+      logger.innerHTML = "";
+    });
+</script>
+</body>
+</html>
