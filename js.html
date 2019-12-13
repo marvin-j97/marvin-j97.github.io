@@ -1,79 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>JS Editor</title>
-<style type="text/css" media="screen">
-    #editor { 
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-    #console {
-      position: fixed;
-      left:49px;
-      bottom: 0px;
-      right: 0;
-      height: 140px;
-      background-color: #050505;
-      color: #fafafa;
-      font-size: 16px;
-      z-index: 101;
-      overflow-y: scroll;
+  <title>JS Editor</title>
+  <style type="text/css" media="screen">
+    body {
+      background: black;
       padding: 5px;
     }
-    #run {
-      position: fixed;
-      left:0px;
-      bottom: 0px;
-      background-color: green;
-      z-index: 100;
+
+    textarea {
+      color: white;
+      background: black;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      overflow: hidden;
       padding: 10px;
+      font-size: 16px;
+      width: 100%;
+      position: relative;
     }
-    #clear {
-      position: fixed;
-      left:0px;
-      bottom: 112px;
-      background-color: lightblue;
-      z-index: 100;
+
+    button {
+      transition: all 0.15s ease-in-out;
+      color: grey;
+      border-radius: 4px;
+      background: none;
+      border: 1px solid #444;
+      width: 80px;
+      height: 40px;
+    }
+
+    button:hover {
+      cursor: pointer;
+      color: white;
+      border-color: white;
+    }
+
+    .console {
+      color: white;
+      max-height: calc(100vh - 400px);
       padding: 10px;
+      margin-top: 20px;
+      border: 1px solid #aaa;
+      border-radius: 4px;
+      font-size: 16px;
+      line-height: 175%;
+      overflow-y: auto;
     }
-</style>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-  
-<div id="clear"><b>CLR</b></div>
-<div id="run"><b>Run</b></div>
-
-<div id="editor">print("Hello world!")</div>
-
-<div id="console"></div>
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.4.4/ace.js" type="text/javascript" charset="utf-8"></script>
-<script>
-    const print = function (message) {
-      if (typeof message == 'object') {
-          logger.innerHTML += (JSON && JSON.stringify ? JSON.stringify(message) : message) + '<br />';
-      } else {
-          logger.innerHTML += message + '<br />';
-      }
-    }
-
-    const editor = ace.edit("editor");
-    editor.setTheme("ace/theme/monokai");
-    editor.session.setMode("ace/mode/javascript");
-    editor.setFontSize(16);
-    const logger = document.getElementById('console');
-
-    document.getElementById("run").addEventListener("click", () => {
-      eval(editor.getValue());
-    });
-
-    document.getElementById("clear").addEventListener("click", () => {
-      logger.innerHTML = "";
-    });
-</script>
+  <div style="display: flex; width: 100%; background: Pink">
+    <textarea id="code" rows="10"></textarea>
+  </div>
+  <div style="padding: 10px; display: flex; justify-content: center;">
+    <button id="run" style="margin-right: 10px">Run</button>
+    <button id="clear">Clear</button>
+  </div>
+  <div id="console" class="console"></div>
 </body>
+
+<script>
+  const _console = document.getElementById("console");
+  const codeBox = document.getElementById("code");
+
+  console.log = console.warn = console.error = print = function (message) {
+    if (typeof message == 'object') {
+      _console.innerHTML += JSON.stringify(message) + '<br/>';
+    } else {
+      _console.innerHTML += message + '<br />';
+    }
+  }
+
+  codeBox.value = `console.log("Hello world!");`;
+  codeBox.addEventListener('keydown', autosize);
+
+  function autosize() {
+    var el = this;
+    setTimeout(function () {
+      el.style.cssText = 'height:auto; padding:0';
+      el.style.cssText = 'height:' + el.scrollHeight + 'px';
+    }, 0);
+  }
+
+  document.getElementById("run").addEventListener("click", () => {
+    eval(codeBox.value);
+  });
+
+  document.getElementById("clear").addEventListener("click", () => {
+    if (confirm("Really clear?")) {
+      _console.innerHTML = "";
+    }
+  });
+</script>
+
 </html>
