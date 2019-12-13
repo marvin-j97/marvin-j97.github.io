@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-  <title>JS Editor</title>
+  <title>Typescript in your browser</title>
   <style type="text/css" media="screen">
     body {
       background: black;
@@ -18,6 +19,7 @@
       padding: 10px;
       font-size: 16px;
       width: 100%;
+      max-height: 40vh;
       position: relative;
     }
 
@@ -38,8 +40,8 @@
     }
 
     .console {
+      flex-grow: 1;
       color: white;
-      max-height: calc(100vh - 400px);
       padding: 10px;
       margin-top: 20px;
       border: 1px solid #aaa;
@@ -47,6 +49,7 @@
       font-size: 16px;
       line-height: 175%;
       overflow-y: auto;
+      max-height: calc(40vh);
     }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -54,7 +57,8 @@
 
 <body>
   <div style="display: flex; width: 100%; background: Pink">
-    <textarea id="code" rows="10"></textarea>
+    <textarea autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" id="code"
+      rows="10"></textarea>
   </div>
   <div style="padding: 10px; display: flex; justify-content: center;">
     <button id="run" style="margin-right: 10px">Run</button>
@@ -62,6 +66,8 @@
   </div>
   <div id="console" class="console"></div>
 </body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typescript/3.7.2/typescript.min.js"></script>
 
 <script>
   const _console = document.getElementById("console");
@@ -75,7 +81,9 @@
     }
   }
 
+
   codeBox.value = `console.log("Hello world!");`;
+
   codeBox.addEventListener('keydown', autosize);
 
   function autosize() {
@@ -87,7 +95,8 @@
   }
 
   document.getElementById("run").addEventListener("click", () => {
-    eval(codeBox.value);
+    let result = ts.transpile(codeBox.value);
+    let runnalbe = eval(result);
   });
 
   document.getElementById("clear").addEventListener("click", () => {
