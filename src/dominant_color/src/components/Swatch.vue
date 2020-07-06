@@ -19,12 +19,10 @@
 </template>
 
 <script>
-import Vue from "vue";
-import Vibrant from "node-vibrant";
+import { copyToClipboard } from "../util/clipboard";
 
 export default {
-  name: "App",
-  components: {},
+  name: "Swatch",
   data() {
     return {
       showCopiedMessage: false,
@@ -32,20 +30,16 @@ export default {
   },
   props: ["value"],
   methods: {
-    copyToClipboard(str) {
-      navigator.clipboard.writeText(str).then(
-        () => {
-          /* clipboard successfully set */
-          this.showCopiedMessage = true;
-          setTimeout(() => {
-            this.showCopiedMessage = false;
-          }, 1500);
-        },
-        () => {
-          /* clipboard write failed */
-          console.error("Error writing to clipboard");
-        }
-      );
+    async copyToClipboard(str) {
+      try {
+        await copyToClipboard(str);
+        this.showCopiedMessage = true;
+        setTimeout(() => {
+          this.showCopiedMessage = false;
+        }, 1500);
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 };

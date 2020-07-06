@@ -9,13 +9,7 @@
 
     <div style="margin-top: 40px; display: flex; justify-content: center">
       <div>
-        <img
-          id="image"
-          v-if="imgSource"
-          width="360"
-          height="360"
-          :src="imgSource"
-        />
+        <img id="image" v-if="imgSource" width="360" :src="imgSource" />
       </div>
     </div>
     <div class="swatch-container">
@@ -33,6 +27,8 @@ import Vue from "vue";
 import Vibrant from "node-vibrant";
 
 import Swatch from "./components/Swatch.vue";
+
+import { getImageBase64 } from "./util/image";
 
 export default {
   name: "App",
@@ -59,17 +55,6 @@ export default {
     });
   },
   methods: {
-    copyToClipboard(str) {
-      navigator.clipboard.writeText(str).then(
-        () => {
-          /* clipboard successfully set */
-        },
-        () => {
-          /* clipboard write failed */
-          console.error("Error writing to clipboard");
-        }
-      );
-    },
     dropHandler(event) {
       let droppedFiles = event.dataTransfer.files;
       if (!droppedFiles) return;
@@ -79,33 +64,28 @@ export default {
 
       this.displayImage(file);
     },
-    displayImage(file) {
-      const reader = new FileReader();
-
-      reader.addEventListener(
-        "load",
-        () => {
-          // convert image file to base64 string
-          this.imgSource = reader.result;
-          this.$nextTick(() => {
-            this.getSwatches();
-          });
-        },
-        false
-      );
-
-      reader.readAsDataURL(file);
-    },
-    getSwatches() {
-      const el = document.getElementById("image");
-      Vibrant.from(el)
-        .getPalette()
-        .then((palette) => {
-          for (const key in palette) {
-            const value = palette[key];
-            Vue.set(this.swatches, key, value.hex);
-          }
+    async displayImage(file) {
+      try {
+        const base64 = await getImageBase64(file);
+        this.imgSource = base64;
+        this.$nextTick(() => {
+          this.getSwatches();
         });
+      } catch (error) {
+        console.error(error);
+      }
+    },
+    async getSwatches() {
+      const el = document.getElementById("image");
+      try {
+        const palette = await Vibrant.from(el).getPalette();
+        for (const key in palette) {
+          const value = palette[key];
+          Vue.set(this.swatches, key, value.hex);
+        }
+      } catch (error) {
+        console.error(error);
+      }
     },
   },
 };
