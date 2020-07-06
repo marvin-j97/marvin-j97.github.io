@@ -37,6 +37,7 @@ export default {
         setTimeout(() => {
           this.showCopiedMessage = false;
         }, 1500);
+        this.$emit("click");
       } catch (error) {
         console.error(error);
       }
@@ -59,22 +60,19 @@ export default {
 .swatch {
   text-align: center;
   padding: 15px;
-  transition: transform 0.1s ease-in-out;
-
-  &:hover {
-    .circle {
-      width: 60px;
-      height: 60px;
-    }
-  }
+  transition: all 0.1s ease-in-out;
 
   .circle {
     display: inline-block;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.25);
+
     transition: width 0.075s ease-in-out, height 0.075s ease-in-out;
+  }
+
+  &:hover {
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   }
 
   .name {
@@ -101,7 +99,8 @@ export default {
       left: 50%;
       top: 125%;
       transform: translateX(-50%);
-      box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.09);
       margin-top: 8px;
     }
   }

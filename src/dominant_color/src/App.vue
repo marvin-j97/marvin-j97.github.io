@@ -17,7 +17,28 @@
         v-for="(swatch, key) in swatches"
         :key="key"
         :value="{ hex: swatch, name: key }"
+        @click="currentColor = swatch"
       />
+    </div>
+    <div v-if="currentColor" class="text-preview-container">
+      <div
+        style="color:#000;padding:1rem"
+        :style="`background-color:${currentColor}`"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+        mollitia aliquam aspernatur eligendi modi soluta nihil? Ratione, sequi
+        dolorem, architecto, consectetur at cumque cum in iusto incidunt vel rem
+        omnis.
+      </div>
+      <div
+        style="color:#fff;padding:1rem"
+        :style="`background-color:${currentColor}`"
+      >
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
+        mollitia aliquam aspernatur eligendi modi soluta nihil? Ratione, sequi
+        dolorem, architecto, consectetur at cumque cum in iusto incidunt vel rem
+        omnis.
+      </div>
     </div>
   </div>
 </template>
@@ -37,6 +58,7 @@ export default {
     return {
       imgSource: null,
       swatches: {},
+      currentColor: null,
     };
   },
   mounted() {
@@ -107,6 +129,13 @@ export default {
   cursor: pointer;
 }
 
+.text-preview-container {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  max-width: 800px;
+}
+
 .heading {
   font-weight: bold;
   text-align: center;
@@ -117,6 +146,7 @@ export default {
 
 .swatch-container {
   margin-top: 25px;
+  margin-bottom: 25px;
   display: flex;
   justify-content: center;
 }
