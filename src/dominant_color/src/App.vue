@@ -3,7 +3,10 @@
     <div class="heading">
       Get image dominant colors
     </div>
-    <div style="text-align: center; opacity: 0.66; font-size: 18px;">
+    <div v-if="isMobile" style="margin-top: 25px; text-align: center; ">
+      <input type="file" @change="displayImage($event.target.files[0])" />
+    </div>
+    <div v-else style="text-align: center; opacity: 0.66; font-size: 18px;">
       (Drop an image file somewhere)
     </div>
 
@@ -37,9 +40,14 @@ export default {
     return {
       imgSource: null,
       swatches: {},
+      isMobile: false,
     };
   },
   mounted() {
+    if (/Mobi/.test(navigator.userAgent)) {
+      this.isMobile = true;
+    }
+
     function allowDrag(event) {
       event.preventDefault();
       event.dataTransfer.dropEffect = "copy";
@@ -58,13 +66,11 @@ export default {
     dropHandler(event) {
       let droppedFiles = event.dataTransfer.files;
       if (!droppedFiles) return;
-
-      const file = droppedFiles[0];
-      if (!file) return;
-
-      this.displayImage(file);
+      this.displayImage(droppedFiles[0]);
     },
     async displayImage(file) {
+      if (!file) return;
+
       try {
         const base64 = await getImageBase64(file);
         this.imgSource = base64;
@@ -117,8 +123,13 @@ export default {
 
 .swatch-container {
   margin-top: 25px;
-  display: flex;
-  justify-content: center;
+}
+
+@media only screen and (min-width: 760px) {
+  .swatch-container {
+    display: flex;
+    justify-content: center;
+  }
 }
 
 .drop-zone {
