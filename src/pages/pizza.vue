@@ -101,8 +101,6 @@ export default Vue.extend({
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Indie+Flower&display=swap");
-
 .title {
   font-family: "Indie Flower", cursive;
 }
