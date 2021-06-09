@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container pt-10">
     <div class="flex justify-center flex-col">
       <div class="flex justify-center">
         <pizza-icon class="mr-3 pizza-icon" />
