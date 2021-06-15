@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="container pt-10">
     <div class="mb-10">
       <div class="text-3xl mb-3">
         <h2>
