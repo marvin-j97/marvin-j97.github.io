@@ -3,7 +3,7 @@
     <div class="mb-10">
       <div class="text-3xl mb-3">
         <h2>
-          My <i><u>professional</u></i> github.io site
+          My <i><u>professional</u></i> github.io page
         </h2>
       </div>
       <div>
