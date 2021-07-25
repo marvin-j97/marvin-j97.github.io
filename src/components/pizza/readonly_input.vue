@@ -5,7 +5,6 @@
       readonly
       class="
         cursor-not-allowed
-        shadow
         appearance-none
         border
         rounded
