@@ -16,7 +16,9 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <slot />
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
 <style is:global>
@@ -37,16 +39,6 @@ const { title } = Astro.props;
     margin: auto;
     padding: 1.5rem;
     max-width: 60ch;
-  }
-  h2 {
-    font-size: 2rem;
-    font-weight: 800;
-    margin: 0;
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  h3 {
-    text-align: left;
   }
   .text-gradient {
     font-style: italic;

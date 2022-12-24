@@ -7,13 +7,14 @@ import PizzaIcon from "../components/PizzaIcon";
 ---
 
 <Layout title="Pizzarechner">
-  <main>
-    <div class="flex text-4xl gap-3 mb-8 justify-center items-center">
-      <PizzaIcon />
-      <h1 class="mb-0 title">Pizzarechner</h1>
-    </div>
-    <PizzaCalculator client:load />
-  </main>
+  <div class="text-center text-gray-500 text-center mb-5">
+    <a href="/">&lt; Back</a>
+  </div>
+  <div class="flex text-4xl gap-3 mb-8 justify-center items-center">
+    <PizzaIcon />
+    <h1 class="mb-0 title">Pizzarechner</h1>
+  </div>
+  <PizzaCalculator client:load />
 </Layout>
 
 <style>

@@ -3,13 +3,16 @@ import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
 ---
 
-<Layout title="Welcome to Astro.">
-  <main>
-    <h2>My <span class="text-gradient">professional</span> GitHub page</h2>
-    <ul role="list" class="link-card-grid">
-      <Card href="/pizza" title="Pizza calculator" body="(German)" />
-    </ul>
-  </main>
+<Layout title="My professional GitHub page">
+  <h2 class="text-center text-3xl font-bold">
+    My <span class="text-gradient">professional</span> GitHub page
+  </h2>
+  <div class="text-gray-500 italic mt-2 mb-10 text-center">
+    Lightweight. Minimal. Portable. Lightning-fast.
+  </div>
+  <ul role="list" class="link-card-grid">
+    <Card href="/pizza" title="Pizza calculator" body="(German)" />
+  </ul>
 </Layout>
 
 <style>
