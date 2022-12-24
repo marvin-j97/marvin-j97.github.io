@@ -1,0 +1,14 @@
+---
+import ColorExtractor from "../components/ColorExtractor";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Color extractor">
+  <div class="text-center text-gray-500 text-center mb-5">
+    <a href="/">&lt; Back</a>
+  </div>
+  <h2 class="text-center text-3xl font-bold mb-10">Color extractor</h2>
+  <ColorExtractor client:load />
+</Layout>
+
+<style></style>
