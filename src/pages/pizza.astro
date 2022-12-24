@@ -1,0 +1,23 @@
+---
+import "@fontsource/indie-flower";
+
+import Layout from "../layouts/Layout.astro";
+import PizzaCalculator from "../components/PizzaCalculator";
+import PizzaIcon from "../components/PizzaIcon";
+---
+
+<Layout title="Pizzarechner">
+  <main>
+    <div class="flex text-4xl gap-3 mb-8 justify-center items-center">
+      <PizzaIcon />
+      <h1 class="mb-0 title">Pizzarechner</h1>
+    </div>
+    <PizzaCalculator client:load />
+  </main>
+</Layout>
+
+<style>
+  .title {
+    font-family: "Indie Flower", cursive;
+  }
+</style>
