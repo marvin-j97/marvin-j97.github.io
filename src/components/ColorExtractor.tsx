@@ -61,11 +61,13 @@ export default function ColorExtractor() {
           <div class="flex justify-center flex-wrap gap-3 mt-10">
             <For each={paletteEntries()}>
               {([_, swatch]) => (
-                <div class="flex items-center gap-3 hover:bg-gray-200 px-4 py-2 transition-transform duration-150 hover:translate-y-[-2px] rounded-lg cursor-pointer">
+                <div
+                  onClick={() =>
+                    copyToClipboard(swatch!.hex).catch(console.error)
+                  }
+                  class="flex items-center gap-3 hover:bg-gray-200 px-4 py-2 transition-transform duration-150 hover:translate-y-[-2px] rounded-lg cursor-pointer"
+                >
                   <div
-                    onClick={() =>
-                      copyToClipboard(swatch!.hex).catch(console.error)
-                    }
                     class="w-[48px] h-[48px] rounded-full cursor-pointer"
                     style={{
                       "background-color": swatch!.hex,
