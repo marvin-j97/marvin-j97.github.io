@@ -1,4 +1,11 @@
-import { createEffect, createMemo, createSignal, For, Show } from "solid-js";
+import {
+  createEffect,
+  createMemo,
+  createSignal,
+  For,
+  onMount,
+  Show,
+} from "solid-js";
 import Vibrant from "node-vibrant";
 import toast, { Toaster } from "solid-toast";
 
@@ -42,6 +49,42 @@ export default function ColorExtractor() {
     }
   });
 
+  onMount(() => {
+    function dropHandler(event: DragEvent) {
+      let file = event.dataTransfer?.files?.[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.addEventListener(
+          "load",
+          () => {
+            if (reader.result) {
+              setImageContent(reader.result.toString());
+            }
+          },
+          false
+        );
+
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function allowDrag(event: DragEvent) {
+      event.preventDefault();
+      if (event.dataTransfer) {
+        event.dataTransfer.dropEffect = "copy";
+      }
+    }
+
+    document.addEventListener("dragenter", allowDrag);
+    document.addEventListener("dragover", allowDrag);
+    document.addEventListener("dragend", allowDrag);
+
+    document.addEventListener("drop", (event) => {
+      event.preventDefault();
+      dropHandler(event);
+    });
+  });
+
   return (
     <>
       <Toaster />
@@ -57,7 +100,7 @@ export default function ColorExtractor() {
             <img
               src={imageContent()!}
               alt="Your image"
-              class="rounded-lg shadow-lg max-w-[250px]"
+              class="rounded-lg shadow-lg max-h-[250px]"
             />
           </div>
           <div class="flex justify-center flex-wrap gap-3 mt-10">
