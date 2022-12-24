@@ -94,6 +94,7 @@ export default function ColorExtractor() {
           setImageContent(image);
         }}
       />
+      <div class="text-sm text-gray-500 mt-3 text-center">Or drop a file</div>
       <div class="mt-10">
         <Show when={imageContent()}>
           <div class="flex justify-center">
