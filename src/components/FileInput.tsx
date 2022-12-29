@@ -27,7 +27,7 @@ export default function FileInput(props: Props) {
         </div>
       </div>
       <input
-        accept="jpg,jpeg,png"
+        accept=".jpg,.jpeg,.png"
         ref={fileInput!}
         class="hidden"
         type="file"
