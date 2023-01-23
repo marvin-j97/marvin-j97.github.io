@@ -37,7 +37,7 @@ export default function PizzaCalculator() {
         <NumberDisplay title="Mehl (g)" value={truncate(farina())} />
         <NumberDisplay title="Wasser (ml)" value={truncate(water())} />
         <NumberDisplay title="Trockenhefe (g)" value={truncate(yeast())} />
-        <NumberDisplay title="Trockenhefe (g)" value={truncate(salt())} />
+        <NumberDisplay title="Salz (g)" value={truncate(salt())} />
         <label>
           <input
             class="mr-2"
