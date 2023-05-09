@@ -1,0 +1,20 @@
+---
+import TypescriptEditor from "../components/TypescriptEditor";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="TypeScript editor">
+  <div class="text-center text-gray-500 text-center mb-5">
+    <a href="/">&lt; Back</a>
+  </div>
+  <div class="text-2xl mb-5 text-center">
+    <span class="font-bold text-blue-600">TypeScript</span> Editor
+  </div>
+  <TypescriptEditor client:load />
+</Layout>
+
+<style is:global>
+  .console > div:nth-child(even) {
+    background: #f2f2fa;
+  }
+</style>
