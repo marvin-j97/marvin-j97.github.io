@@ -1,0 +1,1 @@
+.card-grid{grid-template-columns:repeat(auto-fit,minmax(24ch,1fr))}
