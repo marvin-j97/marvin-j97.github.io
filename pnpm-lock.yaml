@@ -14,8 +14,8 @@ dependencies:
     specifier: 1.7.5
     version: 1.7.5
   solid-toast:
-    specifier: 0.4.0
-    version: 0.4.0(solid-js@1.7.5)
+    specifier: 0.5.0
+    version: 0.5.0(solid-js@1.7.5)
 
 devDependencies:
   '@astrojs/prefetch':
@@ -3222,8 +3222,8 @@ packages:
       csstype: 3.1.2
       seroval: 0.5.1
 
-  /solid-toast@0.4.0(solid-js@1.7.5):
-    resolution: {integrity: sha512-ciJbj+n+7KbUN6wfwZsW7lqFESLoQ9sXMG4uJWuHrIw2f0GxX3/wLSKs0Q1YwdTZZRxyRJ1Nwc2eBVcJvs91+g==}
+  /solid-toast@0.5.0(solid-js@1.7.5):
+    resolution: {integrity: sha512-t770JakjyS2P9b8Qa1zMLOD51KYKWXbTAyJePVUoYex5c5FH5S/HtUBUbZAWFcqRCKmAE8KhyIiCvDZA8bOnxQ==}
     peerDependencies:
       solid-js: ^1.5.4
     dependencies:

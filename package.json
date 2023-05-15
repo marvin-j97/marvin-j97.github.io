@@ -15,7 +15,7 @@
     "lodash.debounce": "4.0.8",
     "node-vibrant": "3.1.6",
     "solid-js": "1.7.5",
-    "solid-toast": "0.4.0"
+    "solid-toast": "0.5.0"
   },
   "devDependencies": {
     "@astrojs/prefetch": "0.2.1",
