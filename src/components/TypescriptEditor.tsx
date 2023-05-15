@@ -78,7 +78,7 @@ console.log(str);
       <div class="text-gray-600">Console</div>
       <div class="shadow console h-[250px] overflow-y-scroll rounded border-2 border-gray-100 bg-white text-gray-700 flex flex-col whitespace-pre font-mono">
         <For each={stdout.items}>
-          {(line) => <div class="px-1 py-2">{line}</div>}
+          {(line) => <div class="text-xs px-1 py-2">{line}</div>}
         </For>
       </div>
     </div>
