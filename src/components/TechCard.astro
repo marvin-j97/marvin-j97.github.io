@@ -1,0 +1,23 @@
+---
+export interface Props {
+  title: string;
+  imgSrc: string;
+  url: string;
+}
+
+const { imgSrc, title, url } = Astro.props;
+---
+
+<li
+  class="cursor-pointer flex rounded-lg link-card shadow border-2 border-slate-100 bg-white hover:border-blue-400 transition-all hover:shadow-lg duration-200 hover:translate-y-[-3px]"
+>
+  <a
+    href={url}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="w-full flex flex items-center gap-4 p-3"
+  >
+    <img class="w-12 h-12" src={imgSrc} alt={`${title} logo`} />
+    <div class="text-lg text-slate-700">{title}</div>
+  </a>
+</li>

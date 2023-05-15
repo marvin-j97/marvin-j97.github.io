@@ -1,47 +1,25 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
+import Header from "../components/Header.astro";
+import TechList from "../components/TechList.astro";
+import ToolList from "../components/ToolList.astro";
 ---
 
 <Layout title="My professional GitHub page">
-  <h2 class="text-center text-3xl font-bold">
-    My <span class="text-gradient">professional</span> GitHub page
-  </h2>
-  <div class="text-gray-500 italic mt-2 mb-10 text-center">
-    Lightweight. Minimal. Portable. Lightning-fast.
+  <div class="flex flex-col gap-10">
+    <Header />
+    <TechList />
+    <!-- <div class="flex flex-col gap-4">
+      <h2 class="text-slate-700 text-2xl font-bold">
+        Some of my <span class="text-blue-500 text-2xl italic">repos</span>
+      </h2>
+    </div> -->
+    <ToolList />
   </div>
-  <ul role="list" class="link-card-grid">
-    <Card
-      href="/editor"
-      title="TypeScript editor"
-      body="Run TypeScript in your browser"
-    />
-    <Card
-      href="/color"
-      title="Color extractor"
-      body="Extract an image's colours in your browser"
-    />
-    <Card
-      newTab
-      href="https://snpy.link"
-      title="snpy.link"
-      body="The best link shortener"
-    />
-    <Card
-      newTab
-      href="https://docker-tools.com/"
-      title="Docker Tools"
-      body="Generate common Docker commands"
-    />
-    <Card href="/pizza" title="Pizza calculator" body="(German)" />
-  </ul>
 </Layout>
 
-<style>
-  .link-card-grid {
-    display: grid;
+<style is:global>
+  .card-grid {
     grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-    gap: 1rem;
-    padding: 0;
   }
 </style>

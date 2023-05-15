@@ -1,0 +1,27 @@
+---
+export interface Props {
+  title: string;
+  body: string;
+  href: string;
+  newTab?: boolean;
+}
+
+const { href, title, body, newTab } = Astro.props;
+---
+
+<li
+  class="cursor-pointer flex rounded-lg link-card shadow border-2 border-slate-100 bg-white hover:border-blue-400 transition-all hover:shadow-lg duration-200 hover:translate-y-[-3px]"
+>
+  <a
+    class="w-full flex flex-col gap-1 p-3"
+    href={href}
+    target={newTab ? "_blank" : undefined}
+  >
+    <div class="font-semibold text-slate-600">
+      {title}
+    </div>
+    <div class="text-sm text-slate-400">
+      {body}
+    </div>
+  </a>
+</li>
