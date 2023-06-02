@@ -7,7 +7,7 @@ function toRatio(num: number): number {
 }
 
 function truncate(num: number): string {
-  return num.toFixed(2);
+  return num.toFixed(1);
 }
 
 export default function PizzaCalculator() {
@@ -69,7 +69,7 @@ export default function PizzaCalculator() {
             max={2}
             title="Hefeanteil (%)"
             value={yeastRatio() * 100}
-            onChange={(x) => setYeastRatio(Number(truncate(x / 100)))}
+            onChange={(x) => setYeastRatio(toRatio(Number(truncate(x))))}
             step={0.1}
           />
           <NumberInput
@@ -77,7 +77,7 @@ export default function PizzaCalculator() {
             max={5}
             title="Salzanteil (%)"
             value={saltRatio() * 100}
-            onChange={(x) => setSaltRatio(Number(truncate(x / 100)))}
+            onChange={(x) => setSaltRatio(toRatio(Number(truncate(x))))}
             step={0.1}
           />
         </Show>
