@@ -57,7 +57,7 @@ export default function PizzaCalculator() {
             onChange={setFarina}
           />
           <NumberInput
-            min={50}
+            min={60}
             max={80}
             title="Hydration (%)"
             value={waterRatio() * 100}
@@ -74,7 +74,7 @@ export default function PizzaCalculator() {
           />
           <NumberInput
             min={0}
-            max={5}
+            max={3}
             title="Salzanteil (%)"
             value={saltRatio() * 100}
             onChange={(x) => setSaltRatio(toRatio(Number(truncate(x))))}
