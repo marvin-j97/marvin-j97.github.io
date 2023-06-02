@@ -14,7 +14,7 @@ export default function PizzaCalculator() {
   const [pizzaCount, setPizzaCount] = createSignal(1);
   const [farinaPerPizza, setFarina] = createSignal(140);
   const [waterRatio, setWaterRatio] = createSignal(toRatio(65));
-  const [yeastRatio, setYeastRatio] = createSignal(toRatio(0.5));
+  const [yeastRatio, setYeastRatio] = createSignal(toRatio(1));
   const [saltRatio, setSaltRatio] = createSignal(toRatio(2.5));
   const [showAdvancedSettings, setAdvancedSettings] = createSignal(false);
 
