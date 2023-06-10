@@ -1,9 +1,13 @@
-lockfileVersion: '6.0'
+lockfileVersion: '6.1'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
 dependencies:
   '@fontsource/indie-flower':
-    specifier: 4.5.10
-    version: 4.5.10
+    specifier: 5.0.3
+    version: 5.0.3
   lodash.debounce:
     specifier: 4.0.8
     version: 4.0.8
@@ -624,8 +628,8 @@ packages:
     dev: true
     optional: true
 
-  /@fontsource/indie-flower@4.5.10:
-    resolution: {integrity: sha512-eT9FyIamAXk9v7XHtTpuOjI1kbxp5NKePfRJ5qy45T2poUWayfU4ub9ISDeVZRVKOxAsYIzk0+3OSraTsC0g5Q==}
+  /@fontsource/indie-flower@5.0.3:
+    resolution: {integrity: sha512-bUbz6Mzl5VyOgLftcJmBhcDsgetTPn1gpnSp+SYYjqemEebB19qgEuLhuDnQlPrtFQ0IUL6A3tM+zefabwvsZw==}
     dev: false
 
   /@jimp/bmp@0.16.13(@jimp/custom@0.16.13):
