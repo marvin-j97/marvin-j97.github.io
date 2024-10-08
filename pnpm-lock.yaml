@@ -41,8 +41,8 @@ devDependencies:
     specifier: 3.3.2
     version: 3.3.2
   typescript:
-    specifier: 5.0.4
-    version: 5.0.4
+    specifier: 5.6.3
+    version: 5.6.3
 
 packages:
 
@@ -1115,7 +1115,7 @@ packages:
       strip-ansi: 7.1.0
       supports-esm: 1.0.0
       tsconfig-resolver: 3.0.1
-      typescript: 5.0.4
+      typescript: 5.6.3
       unist-util-visit: 4.1.2
       vfile: 5.3.7
       vite: 4.3.9
@@ -3573,9 +3573,9 @@ packages:
     engines: {node: '>=12.20'}
     dev: true
 
-  /typescript@5.0.4:
-    resolution: {integrity: sha512-cW9T5W9xY37cc+jfEnaUvX91foxtHkza3Nw3wkoF4sSlKn0MONdkdEndig/qPBWXNkmplh3NzayQzCiHM4/hqw==}
-    engines: {node: '>=12.20'}
+  /typescript@5.6.3:
+    resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
+    engines: {node: '>=14.17'}
     hasBin: true
     dev: true
 
