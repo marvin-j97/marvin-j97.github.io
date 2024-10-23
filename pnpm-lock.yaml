@@ -15,11 +15,11 @@ dependencies:
     specifier: 3.1.6
     version: 3.1.6
   solid-js:
-    specifier: 1.7.5
-    version: 1.7.5
+    specifier: 1.9.3
+    version: 1.9.3
   solid-toast:
     specifier: 0.4.0
-    version: 0.4.0(solid-js@1.7.5)
+    version: 0.4.0(solid-js@1.9.3)
 
 devDependencies:
   '@astrojs/prefetch':
@@ -27,7 +27,7 @@ devDependencies:
     version: 0.2.1
   '@astrojs/solid-js':
     specifier: 2.1.1
-    version: 2.1.1(@babel/core@7.22.5)(solid-js@1.7.5)
+    version: 2.1.1(@babel/core@7.22.5)(solid-js@1.9.3)
   '@astrojs/tailwind':
     specifier: 3.1.2
     version: 3.1.2(astro@2.7.0)(tailwindcss@3.3.2)
@@ -122,14 +122,14 @@ packages:
       prismjs: 1.29.0
     dev: true
 
-  /@astrojs/solid-js@2.1.1(@babel/core@7.22.5)(solid-js@1.7.5):
+  /@astrojs/solid-js@2.1.1(@babel/core@7.22.5)(solid-js@1.9.3):
     resolution: {integrity: sha512-gRz9+d+c18HTRd5yf8TNjel/3kY9cdCPKjKucK3XLscniAjnWBd3/AIx4Rc9S/02Ici3kYhKH9se/D1Ry6nXIg==}
     engines: {node: '>=16.12.0'}
     peerDependencies:
       solid-js: ^1.4.3
     dependencies:
       babel-preset-solid: 1.6.6(@babel/core@7.22.5)
-      solid-js: 1.7.5
+      solid-js: 1.9.3
       vitefu: 0.2.4(vite@4.3.9)
     transitivePeerDependencies:
       - '@babel/core'
@@ -3239,8 +3239,16 @@ packages:
       lru-cache: 6.0.0
     dev: true
 
-  /seroval@0.5.1:
-    resolution: {integrity: sha512-ZfhQVB59hmIauJG5Ydynupy8KHyr5imGNtdDhbZG68Ufh1Ynkv9KOYOAABf71oVbQxJ8VkWnMHAjEHE7fWkH5g==}
+  /seroval-plugins@1.1.1(seroval@1.1.1):
+    resolution: {integrity: sha512-qNSy1+nUj7hsCOon7AO4wdAIo9P0jrzAMp18XhiOzA6/uO5TKtP7ScozVJ8T293oRIvi5wyCHSM4TrJo/c/GJA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      seroval: ^1.0
+    dependencies:
+      seroval: 1.1.1
+
+  /seroval@1.1.1:
+    resolution: {integrity: sha512-rqEO6FZk8mv7Hyv4UCj3FD3b6Waqft605TLfsCe/BiaylRpyyMC0b+uA5TJKawX3KzMrdi3wsLbCaLplrQmBvQ==}
     engines: {node: '>=10'}
 
   /server-destroy@1.0.1:
@@ -3281,18 +3289,19 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
-  /solid-js@1.7.5:
-    resolution: {integrity: sha512-GfJ8na1e9FG1oAF5xC24BM+ATLym0sfH+ZblkbBFpueYdq3fWAoA5Ve+jGeIeLI7jmMGfa0rUaKruszNm2sH8w==}
+  /solid-js@1.9.3:
+    resolution: {integrity: sha512-5ba3taPoZGt9GY3YlsCB24kCg0Lv/rie/HTD4kG6h4daZZz7+yK02xn8Vx8dLYBc9i6Ps5JwAbEiqjmKaLB3Ag==}
     dependencies:
       csstype: 3.1.2
-      seroval: 0.5.1
+      seroval: 1.1.1
+      seroval-plugins: 1.1.1(seroval@1.1.1)
 
-  /solid-toast@0.4.0(solid-js@1.7.5):
+  /solid-toast@0.4.0(solid-js@1.9.3):
     resolution: {integrity: sha512-ciJbj+n+7KbUN6wfwZsW7lqFESLoQ9sXMG4uJWuHrIw2f0GxX3/wLSKs0Q1YwdTZZRxyRJ1Nwc2eBVcJvs91+g==}
     peerDependencies:
       solid-js: ^1.5.4
     dependencies:
-      solid-js: 1.7.5
+      solid-js: 1.9.3
     dev: false
 
   /source-map-js@1.0.2:
