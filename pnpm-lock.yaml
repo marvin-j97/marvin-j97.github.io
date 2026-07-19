@@ -6,8 +6,8 @@ settings:
 
 dependencies:
   '@fontsource/indie-flower':
-    specifier: 4.5.10
-    version: 4.5.10
+    specifier: 5.3.0
+    version: 5.3.0
   lodash.debounce:
     specifier: 4.0.8
     version: 4.0.8
@@ -667,8 +667,8 @@ packages:
     dev: true
     optional: true
 
-  /@fontsource/indie-flower@4.5.10:
-    resolution: {integrity: sha512-eT9FyIamAXk9v7XHtTpuOjI1kbxp5NKePfRJ5qy45T2poUWayfU4ub9ISDeVZRVKOxAsYIzk0+3OSraTsC0g5Q==}
+  /@fontsource/indie-flower@5.3.0:
+    resolution: {integrity: sha512-Wo5eN/ruEQcyC3+ArzhlpqWQgph3VuCNbJlEkVw17LUd0uyTHOb9bTec4g9njQzjiL/ijACF27sSwy90L6kZBg==}
     dev: false
 
   /@jimp/bmp@0.16.13(@jimp/custom@0.16.13):
